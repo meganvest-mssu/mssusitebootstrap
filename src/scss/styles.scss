@@ -1,0 +1,31 @@
+//Variables
+$mssu-green: #206A3A;
+$mssu-gold: #F4CD4D;
+$dark-grey: #282828;
+//Variable Overrides
+//Other custom styles
+.bg-green {
+    background: $mssu-green;
+}
+
+.bg-dark-grey {
+    
+    background: $dark-grey;
+}
+
+.gold {
+    color: $mssu-gold
+}
+
+.mission-card {
+    text-align: center;
+    h3 {
+        color: $mssu-gold;
+    }
+    p {
+        color: white;
+    }
+}
+
+//Imports
+@import "node_modules/bootstrap/scss/bootstrap"
