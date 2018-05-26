@@ -12,6 +12,9 @@
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-nunjucks-render": "^2.2.2",
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
