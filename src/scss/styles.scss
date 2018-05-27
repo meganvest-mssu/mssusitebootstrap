@@ -1,11 +1,22 @@
+
+
+
 //Variables
 $mssu-green: #206A3A;
 $mssu-gold: #F4CD4D;
 $dark-grey: #282828;
-//Variable Overrides
-//Other custom styles
+/* --Variable Overrides --*/
+//Add border breakpoints
+
+
+
+/*-- Other custom styles --*/
 .bg-green {
     background: $mssu-green;
+}
+
+.bg-gold{
+    background: $mssu-gold;
 }
 
 .bg-dark-grey {
@@ -13,7 +24,16 @@ $dark-grey: #282828;
 }
 
 .gold {
-    color: $mssu-gold
+    color: $mssu-gold;
+}
+
+.bg-overlay {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://www.mssu.edu/images/About-possible-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    min-height: 450px;
 }
 
 .mission-card {
@@ -25,6 +45,27 @@ $dark-grey: #282828;
         color: white;
     }
 }
+
+.decision-card{
+    background: white;
+    border-radius: .25em;
+    margin: 1rem 1rem 1rem 1rem;
+    padding-top: .5rem;
+    text-align: center;
+    color: black;
+    
+    &:hover{
+        text-decoration: none;
+        background: $mssu-green;
+        color: white;
+        
+    }
+    
+    i{
+        font-size: 6rem;
+    }
+}
+
 
 //Imports
 @import "node_modules/bootstrap/scss/bootstrap"
