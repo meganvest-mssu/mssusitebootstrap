@@ -13,17 +13,12 @@
     <title>Missouri Southern</title>
 </head>
 
-<body> 
-     {% include "partials/navbar.njk" %}
-{% include "partials/mobile-navbar.njk" %}
- {% include "partials/logo-bar.njk" %} 
-    {% block content %} {% endblock %} 
- {% include "partials/footer.njk" %} 
-    </body>
+<body> {% include "partials/navbar.njk" %} {% include "partials/mobile-navbar.njk" %} {% include "partials/logo-bar.njk" %} {% block content %} {% endblock %} {% include "partials/footer.njk" %} </body>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="/js/jquery.min.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+{% block js %}{% endblock %}
 
 </html>

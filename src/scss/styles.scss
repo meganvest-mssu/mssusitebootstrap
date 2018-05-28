@@ -1,21 +1,17 @@
-
-
-
 //Variables
 $mssu-green: #206A3A;
 $mssu-gold: #F4CD4D;
 $dark-grey: #282828;
+
 /* --Variable Overrides --*/
-//Add border breakpoints
-
-
 
 /*-- Other custom styles --*/
+
 .bg-green {
     background: $mssu-green;
 }
 
-.bg-gold{
+.bg-gold {
     background: $mssu-gold;
 }
 
@@ -28,7 +24,7 @@ $dark-grey: #282828;
 }
 
 .bg-overlay {
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://www.mssu.edu/images/About-possible-1.jpg");
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("https://www.mssu.edu/images/About-possible-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -46,26 +42,64 @@ $dark-grey: #282828;
     }
 }
 
-.decision-card{
+.decision-card {
     background: white;
     border-radius: .25em;
     margin: 1rem 1rem 1rem 1rem;
     padding-top: .5rem;
     text-align: center;
     color: black;
-    
-    &:hover{
+    transition: color .5s, background .5s;
+    &:hover {
         text-decoration: none;
         background: $mssu-green;
         color: white;
-        
     }
-    
-    i{
+    i {
         font-size: 6rem;
     }
 }
 
+//Mobile Navbar
+.navbar-side {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 2px solid #ccc;
+    background-color: #f7f7f9;
+    overflow-y: scroll;
+    z-index: 1000; //transform: translateX(100%);
+    transition: 300ms ease;
+}
 
-//Imports
+
+.navbar-side-item {
+    padding: 1.5rem 0;
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+    height: 5rem;
+}
+
+.side-link {
+    padding-left: 2rem;
+}
+
+.reveal {
+    transform: translateX(0%);
+    transition: 300ms ease;
+}
+
+//Remove link underlines
+.no-underline {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/*-- Imports --*/
+
 @import "node_modules/bootstrap/scss/bootstrap"

@@ -1,9 +1,22 @@
- <!-- Mobile Nav -->
-    <nav class="navbar">
-        <div class="collapse navbar-collapse" id="mobileNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="/#" class="nav-link">Home</a> </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End Mobile Nav -->
+<!-- Mobile Nav -->
+<nav class="navbar" role="navigation">
+    <div class="collapse navbar-collapse" id="mobileNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="/#" class="nav-link">Home</a> </li>
+        </ul>
+    </div>
+    <ul class="navbar-side nav flex-column collapse navbar-collapse" id="navbarSide">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSide" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"> Close </button>
+        <li class="nav-item"> <a class="nav-link active" href="#">Item 1</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Item 2</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Item 3</a> </li>
+        <li class="nav-item"> <a class="nav-link disabled" href="#">Item 4</a> </li>
+        <li class="navbar-side-item"> <a href="#news" class="side-link">News</a> </li>
+        <li class="navbar-side-item"> <a href="#calendar" class="side-link">Calendar</a> </li>
+        <li class="navbar-side-item"> <a href="#map" class="side-link">Map</a> </li>
+        <li class="navbar-side-item"> <a href="#giving" class="side-link">Giving</a> </li>
+        <li class="navbar-side-item"> <a href="#search" class="side-link">Search Site</a> </li>
+        <!-- insert more side-items if you so choose -->
+    </ul>
+</nav>
+<!-- End Mobile Nav -->
