@@ -1,9 +1,15 @@
-//Variables
-$mssu-green: #206A3A;
-$mssu-gold: #F4CD4D;
-$dark-grey: #282828;
+/*-- Imports --*/
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "top-nav";
+@import "footer";
+@import "variables";
+@import "mission-card";
 
-/* --Variable Overrides --*/
+@media screen and (max-width: 600px){
+.bnav{
+a{color: pink}
+}
+}
 
 /*-- Other custom styles --*/
 
@@ -32,15 +38,6 @@ $dark-grey: #282828;
     min-height: 450px;
 }
 
-.mission-card {
-    text-align: center;
-    h3 {
-        color: $mssu-gold;
-    }
-    p {
-        color: white;
-    }
-}
 
 .decision-card {
     background: white;
@@ -100,6 +97,4 @@ $dark-grey: #282828;
 }
 
 
-/*-- Imports --*/
 
-@import "node_modules/bootstrap/scss/bootstrap"
