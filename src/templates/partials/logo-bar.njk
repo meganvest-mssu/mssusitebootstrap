@@ -1,7 +1,13 @@
-<div id="logoBar" class="bg-green py-2 pl-2 d-none d-md-block">
-    <picture>
-        <source media="(min-width: 650px)" srcset="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png">
-        <source srcset="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.svg">
-        <img src="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png" class="img-fluid">
-    </picture>
+<div id="logoBar" class="bg-green container-fluid">
+    <div class="row px-3 py-2 h-100">
+
+        <picture class="col">
+            <source media="(min-width: 650px)" srcset="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png">
+            <source srcset="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.svg">
+            <img src="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png" class="img-fluid">
+        </picture>
+        <span class="col my-auto text-right d-md-none">
+            {% include "partials/mobile-navbar.njk" %}
+        </span>
+    </div>
 </div>

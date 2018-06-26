@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    {% include "partials/mobile-navbar.njk" %} {% include "partials/navbar.njk" %} {% include "partials/logo-bar.njk" %} {% block content %} {% endblock %} {% include "partials/footer.njk" %}
-</body>
-<!-- Optional JavaScript -->
+    {% include "partials/header.njk" %} {% block content %} {% endblock %} {% include "partials/footer.njk" %}
+    <!-- Optional JavaScript -->
 
-{% block js %}{% endblock %}
+    {% block js %}{% endblock %}
+</body>
 
 </html>
