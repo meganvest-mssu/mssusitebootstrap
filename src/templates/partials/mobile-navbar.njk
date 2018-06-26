@@ -1,19 +1,42 @@
 <!-- Mobile Nav -->
-<nav class="navbar navbar-light d-md-none bg-green">
-    <a class="navbar-brand"><img src="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png" class="img-fluid"></a>
-    <button class="navbar-toggler" type="button" id="togglerBtn" data-target="#mobileNavbar" data-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse bg-light" id="mobileNavbar">
-        <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item border-right"><a class="nav-link" href="/students">Students</a> </li>
-            <li class="nav-item border-right"><a class="nav-link" href="/faculty">Faculty &amp; Staff</a></li>
-            <li class="nav-item border-right"><a class="nav-link" href="/alumni">Alumni</a></li>
-            <li class="nav-item"><a class="nav-link" href="/parents">Parents</a></li>
-            <li class="nav-item border-right"> <a href="/news" class="nav-link">News</a> </li>
-            <li class="nav-item border-right"> <a href="/calendar" class="nav-link">Calendar</a> </li>
-            <li class="nav-item border-right"> <a href="/map" class="nav-link">Map</a> </li>
-            <li class="nav-item border-right"> <a href="/giving" class="nav-link">Giving</a> </li>
-            <li class="nav-item"> <a href="/search.html" class="nav-link">Search Site</a> </li>
-        </ul>
-    </div>
+<a href="#main-menu-mobile" class="menu-toggle" role="button" id="main-menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open main menu">
+    <span class="sr-only">Open main menu</span>
+    <span class="fa fa-bars" aria-hidden="true"></span>
+  </a>
+
+<h1 class="logo">hamburgers</h1>
+
+<nav id="main-menu-mobile" class="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
+    <a href="#main-menu-toggle" class="menu-close" role="button" id="main-menu-close" aria-expanded="false" aria-controls="main-menu" aria-label="Close main menu">
+          <span class="sr-only">Close main menu</span>
+          <span class="fa fa-times" aria-hidden="true"></span>
+        </a>
+    <div class="mobile-nav-break"></div>
+    <div class="mobile-nav-heading">Navigation</div>
+    <ul>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Calendar</a></li>
+        <li><a href="#">Map</a></li>
+        <li><a href="#">Giving</a></li>
+    </ul>
+    <div class="mobile-nav-break"></div>
+    <div class="mobile-nav-heading">Search MSSU</div>
+    <form id="main-menu-mobile-searchform">
+        <input type="text" />
+        <button type="submit">Search</button>
+    </form>
+    <div class="mobile-nav-break"></div>
+    <div class="mobile-nav-heading">Audiences</div>
+    <ul>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Faculty &amp; Staff</a></li>
+        <li><a href="#">Alumni</a></li>
+        <li><a href="#">Parents</a></li>
+    </ul>
 </nav>
+<a href="#main-menu-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
+<script>
+
+
+</script>
 <!-- End Mobile Nav -->

@@ -1,14 +1,18 @@
 /*-- Imports --*/
+
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "top-nav";
 @import "footer";
 @import "variables";
 @import "mission-card";
+@import "mobile-nav";
 
-@media screen and (max-width: 600px){
-.bnav{
-a{color: pink}
-}
+@media screen and (max-width: 600px) {
+    .bnav {
+        a {
+            color: pink
+        }
+    }
 }
 
 /*-- Other custom styles --*/
@@ -95,6 +99,3 @@ a{color: pink}
     display: inline-block;
     text-decoration: none;
 }
-
-
-
