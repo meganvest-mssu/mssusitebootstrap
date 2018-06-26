@@ -1,6 +1,20 @@
-{% extends "layout.njk" %} 
-{% block content %}
+{% extends "layout.njk" %} {% block content %}
 <div class="container">
-<h3>These are the results of the search</h3>
+    <!-- TODO get google search results to display in page. this should be on our custom google search page settings -->
+    <gcse:searchresults-only></gcse:searchresults-only>
+    <script>
+        (function() {
+            var cx = '014032116808286694933:ykszde6dmh0';
+            var gcse = document.createElement('script');
+
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+
+    </script>
 </div>
 {% endblock %}

@@ -8,8 +8,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.co/css?family=Railway:400,800">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
     <link rel="stylesheet" href="/css/styles.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <title>Missouri Southern</title>
 </head>
 
@@ -17,10 +20,7 @@
     {% include "partials/mobile-navbar.njk" %} {% include "partials/navbar.njk" %} {% include "partials/logo-bar.njk" %} {% block content %} {% endblock %} {% include "partials/footer.njk" %}
 </body>
 <!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/js/jquery.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+
 {% block js %}{% endblock %}
 
 </html>
