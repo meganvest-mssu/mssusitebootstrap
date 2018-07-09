@@ -1,6 +1,7 @@
 <!-- News Section -->
 <section class="container mt-4 mb-4">
-    <div class="row">
+
+    <div class="row" id="news_section">
         <div class="col-md-4 border-right" id="news_main">
             <h4>News</h4>
             <picture>
@@ -8,14 +9,6 @@
             </picture>
             <h6 id="news_main_title"></h6>
             <div id="news_main_excerpt"></div>
-        </div>
-        <div class="col-md-8 border-left" id="news_list">
-            <div class="mb-3 text-center border-bottom">
-                <span class="h6 mr-3">Featured</span>
-                <a class="btn btn-primary mb-3" href="//crossroads.mssu.edu">More News &gt;</a>
-            </div>
-            <ul id="news_featured_list">
-            </ul>
         </div>
     </div>
 </section>
@@ -33,6 +26,19 @@
             $("#news_main > picture > img").attr('src', data[0]._embedded['wp:featuredmedia'][0].source_url);
             $("#news_main_title").html(data[0].title.rendered);
             $("#news_main_excerpt").html($(data[0].excerpt.rendered).append(`<a href='${data[0].link}'>[More]</a>`));
+
+
+            //Populate the featured section
+            var featuredSkeletonTemplate = `<div class="col-md-8 border-left" id="news_list">
+            <div class="mb-3 text-center border-bottom">
+                <span class="h6 mr-3">Featured</span>
+                <a class="btn btn-primary mb-3" href="//crossroads.mssu.edu">More News &gt;</a>
+            </div>
+            <ul id="news_featured_list">
+            </ul>
+        </div>`;
+
+            $("#news_section").append(featuredSkeletonTemplate);
 
             //Populate with three more stories on the right
 

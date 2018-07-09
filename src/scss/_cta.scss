@@ -1,0 +1,28 @@
+#cta {
+
+    a {
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        text-align: center;
+        text-decoration: none;
+        color: pink;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: background-size .8s ease-in-out;
+        &:hover {
+            background-size: 110%;
+
+        }
+
+
+        span {
+            margin: 0;
+            padding: 1.5em;
+            display: block;
+            line-height: 100%;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+        }
+    }
+}
