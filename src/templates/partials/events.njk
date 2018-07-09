@@ -1,22 +1,54 @@
- <!-- Events -->
-    <section id="events" class="container">
-        <h4>Events</h4>
-        <div class="row">
-            <div class="col-md-4">
-                <h5>March 28</h5>
-                <p class="lead">General Marketing</p>
-                <p>9:30pm-10:00pm</p>
-            </div>
-            <div class="col-md-4">
-                <h5>March 28</h5>
-                <p class="lead">General Marketing</p>
-                <p>9:30pm-10:00pm</p>
-            </div>
-            <div class="col-md-4">
-                <h5>March 28</h5>
-                <p class="lead">General Marketing</p>
-                <p>9:30pm-10:00pm</p>
-            </div>
-        </div>
-    </section>
-    <!-- End Events -->
+<!-- Events -->
+<section id="events" class="container mb-4">
+    <h4>Events</h4>
+    <div class="row"></div>
+</section>
+<script>
+    $(function() {
+
+        //Template for event
+        function eventTemplate(data) {
+
+            var template = `
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">${data.date.toLocaleDateString([], {month: 'long', day:'numeric'})}</h5>
+                        <p class="card-text">${data.title}</p>
+                        <p>${data.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+                        <a href="${data.link}" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>`;
+
+            return template;
+
+        }
+
+        $.get('https://www.mssu.edu/calendar/rss/?sID=3', function(data) {
+            var $eventsXML = $($.parseXML(data.documentElement.innerHTML)).slice(0, 3);
+            var $topThreeEvents = $eventsXML.find("item").slice(0, 3);
+
+            $topThreeEvents.map((i, j) => {
+
+                var date = new Date($(j).find("pubDate").text());
+                var title = $(j).find("title").text().split("-").pop().trim();
+                var link = $(j).find("link").text();
+
+                var eventData = {
+                    date,
+                    title,
+                    link
+                };
+
+
+                var eventString = eventTemplate(eventData);
+
+                $("#events  > div").append(eventString);
+            });
+
+        });
+    });
+
+</script>
+<!-- End Events -->
