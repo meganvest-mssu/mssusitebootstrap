@@ -1,0 +1,6 @@
+{% macro decision(url='', mainText='Main', subText='default', glyph='far fa-map') %}
+<a href="{{url}}" class="decision-card col-12 col-md-3 mx-md-auto my-3"> 
+                    <i class="{{ glyph }} card-img-top"></i>
+                    <h4>{{ mainText }}</h4>
+                    <p>{{ subText }}</p>
+                </a> {% endmacro %}

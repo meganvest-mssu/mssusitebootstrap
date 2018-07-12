@@ -1,0 +1,16 @@
+.decision-card {
+    background: white;
+    border-radius: .25em;
+    padding-top: .5rem;
+    text-align: center;
+    color: black;
+    transition: color .5s, background .5s;
+    &:hover {
+        text-decoration: none;
+        background: $mssu-green;
+        color: white;
+    }
+    i {
+        font-size: 6rem;
+    }
+}

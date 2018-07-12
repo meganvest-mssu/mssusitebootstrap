@@ -1,27 +1,14 @@
 <!-- Decisions section -->
-    <section class="bg-overlay">
-        <div class="container">
+{% from "macros/_decision.njk" import decision %}
+<section class="bg-overlay">
+    <div class="container">
         <div class="text-center pt-4 pb-4">
-        <h1 class="display-4">Decisions are hard.</h1>
-        <h1 class="display-4">Choosing MOSO is EASY.</h1>
+            <h1 class="display-4">Decisions are hard.</h1>
+            <h1 class="display-4">Choosing MOSO is EASY.</h1>
         </div>
         <div class="row">
-            <a href="/home" class="decision-card col-md-3 mr-auto"> 
-                <i class="far fa-map card-img-top"></i>
-                <h4>See campus for yourself.</h4>
-                <p>Schedule a tour</p>
-            </a>
-            <a href="/home" class="decision-card col-md-3 mlr-auto">
-                <i class="fas fa-graduation-cap"></i>
-                <h4>Find the perfect major.</h4>
-                <p>Explore programs</p>
-            </a>
-            <a href="/home" class="decision-card col-md-3 ml-auto">
-                <i class="fas fa-dollar-sign"></i>
-                <h4>No fees make paying for college easy.</h4>
-                <p>Estimate cost</p>
-            </a>
-            </div>
-            </div>
-    </section>
-    <!-- End Descisions section -->
+            {{ decision('/home', 'See Campus for Yourself', 'Schedule a tour', 'far fa-map') }} {{ decision('/home', 'Find the perfect major.', 'Explore programs.', 'fas fa-graduation-cap') }} {{ decision('/home', 'No fees make paying for college easy.', 'Exstimate cost.', 'fas fa-dollar-sign') }}
+        </div>
+    </div>
+</section>
+<!-- End Descisions section -->

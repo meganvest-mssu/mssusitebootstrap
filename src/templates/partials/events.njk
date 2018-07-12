@@ -1,7 +1,8 @@
 <!-- Events -->
 <section id="events" class="container mb-4">
-    <h4>Events</h4>
-    <div class="row"></div>
+    <h4 class="d-inline-block">Events</h4>
+    <a class="ml-3" href="#">See more...</a>
+    <div id="events_list" class="row"></div>
 </section>
 <script>
     $(function() {
@@ -16,7 +17,7 @@
                         <h5 class="card-title">${data.date.toLocaleDateString([], {month: 'long', day:'numeric'})}</h5>
                         <p class="card-text">${data.title}</p>
                         <p>${data.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
-                        <a href="${data.link}" class="btn btn-primary">More info</a>
+                        <a href="${data.link}">More info</a>
                         </div>
                     </div>
                 </div>`;
@@ -44,7 +45,7 @@
 
                 var eventString = eventTemplate(eventData);
 
-                $("#events  > div").append(eventString);
+                $("#events_list").append(eventString);
             });
 
         });

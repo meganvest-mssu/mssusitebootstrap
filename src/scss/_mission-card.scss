@@ -1,9 +1,50 @@
+//This works okay but if the back side if longer than the front the content will overflow
 .mission-card {
-    text-align: center;
     h3 {
         color: $mssu-gold;
     }
     p {
         color: white;
     }
+
+    perspective: 1000px;
+
+    &:hover {
+
+        .card-flip {
+            transform: rotateY(180deg);
+        }
+
+    }
+
+}
+
+.card-flip {
+    transition: .6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card-flip,
+mission-front,
+.mission-back {
+    width: 100%;
+}
+
+.mission-front,
+.mission-back {
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+
+.mission-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.mission-back {
+    transform: rotateY(180deg);
+    position: absolute;
 }

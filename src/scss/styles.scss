@@ -7,6 +7,8 @@
 @import "mission-card";
 @import "mobile-nav";
 @import "cta";
+@import "decision-card";
+@import "hero-picture";
 
 @media screen and (max-width: 600px) {
     .bnav {
@@ -44,23 +46,7 @@
 }
 
 
-.decision-card {
-    background: white;
-    border-radius: .25em;
-    margin: 1rem 1rem 1rem 1rem;
-    padding-top: .5rem;
-    text-align: center;
-    color: black;
-    transition: color .5s, background .5s;
-    &:hover {
-        text-decoration: none;
-        background: $mssu-green;
-        color: white;
-    }
-    i {
-        font-size: 6rem;
-    }
-}
+
 
 //Mobile Navbar
 .navbar-side {

@@ -1,0 +1,14 @@
+{% macro mission_card(title, paragraph, back) %}
+<div class="mission-card col-md-3">
+    <div class="card-flip">
+        <div class="mission-front">
+            <h3 class="">{{ title }}</h3>
+            <p>{{ paragraph }}</p>
+        </div>
+        <div class="mission-back">
+            <p class="mission_back">{{ back }}</p>
+        </div>
+    </div>
+
+</div>
+{% endmacro %}
