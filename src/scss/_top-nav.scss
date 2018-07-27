@@ -1,32 +1,32 @@
-nav.top-nav{
-	position: relative;
-	
-	a{
-		padding-right: .5em;
-		
-		display: inline-block;
-		color: rgba(0,0,0,.5);
-		&:hover{
-			text-decoration: none;
-			color: rgba(0,0,0,.8);
-		}
-	}
+nav.top-nav {
+    position: relative;
+
+    a {
+        padding-right: .5em;
+
+        display: inline-block;
+        color: rgba(0, 0, 0, .5);
+        &:hover {
+            text-decoration: none;
+            color: rgba(0, 0, 0, .8);
+        }
+    }
 
 
 }
 
-.dropdown{
-	position: relative;
+.dropdown {
+    position: relative;
 }
 
-.dropdown:hover .dropdown-content{
-	display: block;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-.dropdown-content{
-	display:block;
-	width: 100%;
-	position:absolute;
-	left:0;
-	background-color: white;
+.dropdown-content {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: white;
 }

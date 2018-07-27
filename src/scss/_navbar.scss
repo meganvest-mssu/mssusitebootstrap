@@ -1,0 +1,133 @@
+//Content filler for example
+.content {
+    height: 200vh;
+    background-image: url(https://images.unsplash.com/photo-1454372182658-c712e4c5a1db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=222a0154798d92d5950fd34abd985a18&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+}
+
+
+//Nav styles start here
+header {
+    background: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.logo {
+    display: block;
+    margin: 0;
+    padding: 1em;
+    background-color: $mssu-green;
+    background-image: url(https://www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 50px;
+    span {
+        position: absolute;
+        left: 1000em;
+    }
+    text-indent: -100%;
+}
+
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+.nav-toggle:checked ~ nav {
+    //display: block;
+    left: 0;
+
+}
+
+
+nav {
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 100%;
+    transition: left .5s;
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: dimgrey;
+        }
+    }
+}
+
+
+//Medium Screens
+@include md {}
+
+@include lg {
+    header {
+
+        position: relative;
+
+
+        .logo {
+            margin: 0;
+
+            background-size: auto;
+            height: 150px;
+            span {
+                position: absolute;
+                left: 1000em;
+            }
+        }
+    }
+
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                padding: 0 1em;
+            }
+        }
+
+
+
+
+    }
+}

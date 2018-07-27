@@ -1,0 +1,27 @@
+.testimonial {
+    padding: 0;
+
+    .testimonial-copy {
+        padding: 0;
+        margin: 0;
+        background-color: $mssu-gold;
+    }
+
+    .testimonial-image {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+//Move the testimonial boxes side by side with angled edge when medium and higher
+@include media-breakpoint-up(md) {
+    .testimonial-copy {
+        display: inline-block;
+        width: 30%;
+    }
+
+    .testimonial-image {
+        width: 25%;
+    }
+}
