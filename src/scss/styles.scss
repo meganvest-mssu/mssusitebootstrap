@@ -13,8 +13,13 @@
 /* 
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "top-nav";
-@import "footer";
+*/
+
+@import "global";
 @import "variables";
+@import "navbar";
+
+@import "footer";
 @import "mission-card";
 @import "mobile-nav";
 @import "cta";
@@ -22,9 +27,3 @@
 @import "hero-picture";
 @import "testimonial";
 @import "styles-extra";
-
-*/
-
-@import "global";
-@import "variables";
-@import "navbar"
