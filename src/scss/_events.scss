@@ -1,0 +1,76 @@
+.events {
+    margin: 0;
+    padding: 1rem;
+    background: $gray-100;
+
+    h2 {
+        text-transform: lowercase;
+        font-weight: 200;
+        font-size: 3rem;
+        display: inline;
+
+        span {
+            text-transform: uppercase;
+            color: $gray-500;
+        }
+    }
+
+    a {
+        color: $mssu-green;
+    }
+}
+
+.event-card {
+    display: flex;
+    background: $mssu-gold;
+    border: 1px solid black;
+    padding: 0rem;
+    margin-bottom: 1rem;
+}
+
+.event-card-date-info,
+.event-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 6rem;
+    padding: 1rem;
+
+}
+
+.event-card-info {
+    background: white;
+    width: 100%;
+}
+
+.event-card-month {
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.event-card-day {
+    font-size: .7rem;
+}
+
+.event-card-date {
+    font-size: 4rem;
+    line-height: 3.5rem;
+}
+
+@include lg {
+
+    .events-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    #events_list {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .event-card {
+        flex: 1;
+        max-width: 25%;
+    }
+}

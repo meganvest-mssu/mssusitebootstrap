@@ -1,10 +1,13 @@
 #hero-picture-section {
     position: relative;
+    img {
+        width: 100%;
+    }
 }
 
 .hero-cta {
     text-align: center;
-    font-size: 3em;
+    font-size: 2rem;
     padding: 0;
     margin: 0;
 
@@ -28,7 +31,8 @@
 }
 
 //Move the hero-cta buttons when medium and higher
-@include media-breakpoint-up(md) {
+//@include media-breakpoint-up(md) {
+@include lg {
     #hero-cta-section {
         position: absolute;
         top: 1em;
@@ -37,7 +41,7 @@
 
     .hero-cta {
         text-align: left;
-        margin: .2em 0;
+        margin: .6rem 0;
 
         a {
             clip-path: polygon(10% 0, 100% 0, 100% 100%, 20% 100%);

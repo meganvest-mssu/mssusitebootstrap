@@ -1,14 +1,11 @@
 <!-- Decisions section -->
 {% from "macros/_decision.njk" import decision %}
-<section class="bg-overlay">
-    <div class="container">
-        <div class="text-center pt-4 pb-4">
-            <h1 class="display-4">Decisions are hard.</h1>
-            <h1 class="display-4">Choosing MOSO is EASY.</h1>
-        </div>
-        <div class="row">
-            {{ decision('/home', 'See Campus for Yourself', 'Schedule a tour', 'far fa-map') }} {{ decision('/home', 'Find the perfect major.', 'Explore programs.', 'fas fa-graduation-cap') }} {{ decision('/home', 'No fees make paying for college easy.', 'Exstimate cost.', 'fas fa-dollar-sign') }}
-        </div>
+<section class="section-decisions">
+    <div class="decisions-title">
+        <h1>Why MOSO is right for you.</h1>
+    </div>
+    <div class="decision-cards">
+        {{ decision('/home', 'See Campus for Yourself', 'Schedule a tour.', 'far fa-map') }} {{ decision('/home', 'Find the perfect major.', 'Explore programs.', 'fas fa-graduation-cap') }} {{ decision('/home', 'No fees make paying for college easy.', 'Exstimate cost.', 'fas fa-dollar-sign') }}
     </div>
 </section>
 <!-- End Descisions section -->

@@ -1,5 +1,12 @@
+//Mission Car Section - Might want to move this elsewhere but for now its here
+.mission-section {
+    text-align: center;
+}
+
+
 //This works okay but if the back side if longer than the front the content will overflow
 .mission-card {
+    padding: 1rem;
     h3 {
         color: $mssu-gold;
     }
@@ -47,4 +54,12 @@ mission-front,
 .mission-back {
     transform: rotateY(180deg);
     position: absolute;
+}
+
+//Breakpoints
+@include lg {
+    .mission-section {
+        display: flex;
+        flex-direction: row;
+    }
 }
