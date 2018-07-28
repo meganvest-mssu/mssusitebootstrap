@@ -1,28 +1,42 @@
 #cta {
 
     a {
-        margin: 0;
-        padding: 0;
-        opacity: 1;
+        display: block;
         text-align: center;
+        font-size: 2rem;
         text-decoration: none;
-        color: pink;
-        background-repeat: no-repeat;
         background-size: 100%;
-        transition: background-size .8s ease-in-out;
+        transition: background-size 1s ease-in-out;
         &:hover {
             background-size: 110%;
 
         }
 
-
         span {
+            color: $mssu-gold;
             margin: 0;
             padding: 1.5em;
             display: block;
             line-height: 100%;
             width: 100%;
             background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+        }
+
+    }
+
+}
+
+@include lg {
+    #cta {
+        display: flex;
+
+        a {
+            flex: 1;
+            font-size: 1.5rem;
+
+            span {
+                padding: .7rem;
+            }
         }
     }
 }

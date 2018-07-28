@@ -1,13 +1,13 @@
 //Decisions Section
 .section-decisions {
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("https://www.mssu.edu/images/About-possible-1.jpg");
+    border: 1px solid black;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+    url("https://www.mssu.edu/images/About-possible-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    color: #fff;
-    min-height: 450px;
-
+    text-align: center;
+    color: #fff; //min-height: 450px;
     .decisions-title h1 {
         font-size: 3rem;
         font-weight: 100;
@@ -26,12 +26,14 @@
     padding-top: .5rem;
     text-align: center;
     color: black;
-    transition: color .5s, background .5s;
+    transition: color .5s,
+    background .5s;
     &:hover {
         text-decoration: none;
         background: $mssu-green;
         color: white;
     }
+
     i {
         font-size: 6rem;
     }

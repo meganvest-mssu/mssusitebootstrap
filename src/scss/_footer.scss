@@ -1,1 +1,68 @@
-/* Footer special css */
+/* Footer css */
+
+footer {
+    padding: 1rem;
+    background: $mssu-green;
+    a,
+    li {
+        color: white;
+    }
+
+    ul {
+        list-style: none;
+    }
+}
+
+
+
+.footer-logo {
+
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 1rem;
+    }
+}
+
+.footer-common-links {
+    display: inline-block;
+    text-align: right;
+    width: 45%;
+}
+
+.footer-cta {
+    display: inline-block; //border: 1px solid black;
+    vertical-align: top;
+    width: 45%;
+}
+
+.footer-contact-links {
+    border-top: 1px solid white;
+    padding-top: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    a {
+        margin: 0 1rem;
+        width: 20%;
+    }
+
+}
+
+.footer-social {
+    text-align: center;
+    margin-bottom: 1rem;
+    a {
+        margin: 0 .5rem;
+        color: $mssu-green;
+    }
+
+}
+
+.footer-contact {
+    font-size: .7rem;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
