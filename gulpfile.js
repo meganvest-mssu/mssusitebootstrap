@@ -6,13 +6,14 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var newer = require('gulp-newer');
 var reload = browserSync.reload;
 var src = {
-    scss: 'src/scss/**/*.scss'
-    , css: 'src/css/'
-    , njk: 'src/**/*.njk'
-    , dist: 'dist/'
+    scss: 'src/scss/**/*.scss',
+    css: 'src/css/',
+    njk: 'src/**/*.njk',
+    dist: 'dist/'
 };
 gulp.task('serve', ['scss', 'nunjucks'], function () {
     browserSync.init({
+	open: false,
         server: "./dist"
     });
     gulp.watch(src.njk, ['nunjucks']);
