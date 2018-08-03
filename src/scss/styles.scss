@@ -2,13 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,400');
 @import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
-
 // Boostratp
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/reboot";
-
 
 /* 
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -18,7 +16,6 @@
 @import "global";
 @import "variables";
 @import "navbar";
-
 @import "footer";
 @import "mission-card";
 @import "mobile-nav";
@@ -27,4 +24,5 @@
 @import "hero-picture";
 @import "events";
 @import "testimonial";
+@import "news";
 @import "styles-extra";

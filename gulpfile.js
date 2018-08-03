@@ -11,7 +11,7 @@ var src = {
     njk: 'src/**/*.njk',
     dist: 'dist/'
 };
-gulp.task('serve', ['scss', 'nunjucks'], function () {
+gulp.task('serve', ['scss', 'nunjucks', 'js'], function () {
     browserSync.init({
 	open: false,
         server: "./dist"
@@ -46,5 +46,9 @@ gulp.task('scss', function () {
 gulp.task('default', ['serve']);
 gulp.task('minify-css', ['sass', 'scss'], function () {
     return gulp.src(src.css + '**/*.css').pipe(cssmin()).pipe(gulp.dest(src.dist + 'css'));
+});
+gulp.task('js', function(){
+	return gulp.src('node_modules/jquery/dist/jquery.min.js')
+		.pipe(gulp.dest('dist/js'));
 });
 gulp.task('production', ['nunjucks', 'html', 'minify-css']);
