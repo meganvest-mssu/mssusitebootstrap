@@ -7,21 +7,17 @@ footer {
     li {
         color: white;
     }
-
     ul {
         list-style: none;
     }
 }
 
-
-
 .footer-logo {
-
-
     img {
         display: block;
         margin: 0 auto;
-        width: 70%;
+        width: 100%;
+        max-width: 200px;
         margin-bottom: 1rem;
     }
 }
@@ -47,7 +43,6 @@ footer {
         margin: 0 1rem;
         width: 20%;
     }
-
 }
 
 .footer-social {
@@ -57,12 +52,24 @@ footer {
         margin: 0 .5rem;
         color: $mssu-green;
     }
-
 }
 
 .footer-contact {
     font-size: .7rem;
     text-align: center;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
+    color: white;
+}
+
+@include lg {
+    .footer-logo {
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 1rem;
+        }
+    }
 }

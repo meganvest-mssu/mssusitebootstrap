@@ -5,33 +5,25 @@
     background-size: cover;
 }
 
-
 //Nav styles start here
 header {
     background: $mssu-green;
-
-
     nav {
-        display: none;
+        //display: none;
+        position: relative;
         text-align: center;
-        float: left;
         width: 100%;
-        transition: all .5s ease;
-
-        ul {
-            list-style: none;
-        }
         background-color: white;
-
-
-
+        border-bottom: 1px solid $gray-400;
+        padding-top: 1rem;
         a {
+            display: block;
+            padding-bottom: 1rem;
             color: black;
             text-decoration: none;
             text-transform: uppercase;
-
             &:hover {
-                color: dimgrey;
+                color: $gray-600;
             }
         }
     }
@@ -48,13 +40,11 @@ header {
     background-size: contain;
     width: 275px;
     height: 80px;
-
 }
 
 .top-lantern {
     display: none;
 }
-
 
 .nav-toggle {
     display: none;
@@ -76,13 +66,8 @@ header {
     display: block;
 }
 
-
-
-
-
 //Medium Screens
 @include md {
-
     .logo {
         //background: url(https://www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png) center center no-repeat;
         //background-size: contain;
@@ -95,36 +80,27 @@ header {
         display: flex;
         flex-wrap: wrap;
         background: $mssu-green;
-
         nav {
-            float: none;
-            position: relative;
-            padding-top: .5rem;
-
-            li {
+            border-bottom: 0;
+            a {
                 display: inline-block;
                 padding: 0 .5rem;
-
-                &:not(:last-child) {
+                /*&:not(: last-child) {
                     border-right: 1px solid black;
-                }
+                }*/
             }
-
         }
     }
-
     .header-logo {
         width: 25%;
         padding-left: 1em;
     }
-
     .logo {
         //background: url(https://www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png) center center no-repeat;
         background: url(https://www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png) center center no-repeat;
         background-size: contain;
         width: 300px;
     }
-
     .top-lantern {
         display: block;
         position: absolute;
@@ -132,43 +108,35 @@ header {
         left: 50%;
         margin-left: -125px;
         clip: rect(0px, 200px, 70px, 0px);
-
-
+        margin-top: 5px;
     }
-
     .nav-toggle-label {
         display: none;
     }
-
-
-
     .nav-audience,
     .nav-common {
-        display: block;
+        padding: .5rem 0;
+        margin: 0;
         order: -1;
         width: 50%;
     }
-
     .nav-sales {
         display: flex;
         background: none;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
         width: 50%;
-
         li {
-            &:not(:last-child) {
+            /*&:not(: last-child) {
                 border-right: 1px solid white;
-            }
+            }*/
         }
-
         a {
             color: white;
-
             &:hover {
                 color: white;
             }
         }
     }
-
 }

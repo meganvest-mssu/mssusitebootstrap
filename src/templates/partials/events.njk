@@ -1,17 +1,13 @@
 <!-- Events -->
 <section class="events">
     <div class="events-header">
-        <h2><span>MOSO</span>Events</h2>
-        <a href="#" aria-label="Missouri Southern Calendar" title="View the MSSU Calendar">See more...</a>
-    </div>
+        <h2><span>MOSO</span>Events</h2> <a href="#" aria-label="Missouri Southern Calendar" title="View the MSSU Calendar">See more...</a> </div>
     <div id="events_list"></div>
 </section>
 <script>
-    $(function() {
-
+    $(function () {
         //Template for event
         function eventTemplate(data) {
-
             var template = `
                 <div class="event-card">
                     <div class="event-card-date-info">
@@ -26,35 +22,22 @@
     <a class="event-card-link" href="${data.link}">More info <i class="fas fa-info-circle"></i></a>
                     </div>
                 </div>`;
-
             return template;
-
         }
-
-        $.get('https://www.mssu.edu/calendar/rss/?sID=3', function(data) {
+        $.get('https://www.mssu.edu/calendar/rss/?sID=3', function (data) {
             var $eventsXML = $($.parseXML(data.documentElement.innerHTML)).slice(0, 3);
             var $topThreeEvents = $eventsXML.find("item").slice(0, 3);
-
             $topThreeEvents.map((i, j) => {
-
                 var date = new Date($(j).find("pubDate").text());
                 var title = $(j).find("title").text().split("-").pop().trim();
                 var link = $(j).find("link").text();
-
                 var eventData = {
-                    date,
-                    title,
-                    link
+                    date, title, link
                 };
-
-
                 var eventString = eventTemplate(eventData);
-
                 $("#events_list").append(eventString);
             });
-
         });
     });
-
 </script>
 <!-- End Events -->

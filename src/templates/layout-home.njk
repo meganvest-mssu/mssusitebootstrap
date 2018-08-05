@@ -16,14 +16,10 @@
     <!--
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>-->
-    <title>Missouri Southern</title>
+    <title>Missouri Southern State University</title>
 </head>
 
-<body>
-    {% include "partials/header.njk" %} {% block content %} {% endblock %} {# {% include "partials/footer.njk" %} #}
-    <!-- Optional JavaScript -->
-
-    {% block js %}{% endblock %}
-</body>
+<body> {% include "partials/header.njk" %} {# {% block content %} {% endblock %} #} {% include "partials/footer.njk" %}
+    <!-- Optional JavaScript -->{% block js %}{% endblock %} </body>
 
 </html>
