@@ -2,19 +2,21 @@
     margin: 0;
     padding: 1rem;
     background: $gray-100;
-
+    
+    .events-header{
+        text-align: center;
+    }
+    
     h2 {
         text-transform: lowercase;
         font-weight: 200;
         font-size: 3rem;
         display: inline;
-
         span {
             text-transform: uppercase;
             color: $gray-500;
         }
     }
-
     a {
         color: $mssu-green;
     }
@@ -36,7 +38,6 @@
     text-align: center;
     width: 6rem;
     padding: 1rem;
-
 }
 
 .event-card-info {
@@ -59,7 +60,6 @@
 }
 
 @include lg {
-
     .events-header {
         text-align: center;
         margin-bottom: 2rem;

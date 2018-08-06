@@ -5,10 +5,10 @@
     padding: 1rem;
     background: $gray-100;
     h2 {
+        text-align: center;
         text-transform: lowercase;
         font-weight: 200;
         font-size: 3rem;
-        display: inline;
         span {
             text-transform: uppercase;
             color: $gray-500;

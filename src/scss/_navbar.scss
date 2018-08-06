@@ -9,14 +9,15 @@
 header {
     background: $mssu-green;
     nav {
-        //display: none;
+        display: none;
         position: relative;
         text-align: center;
         width: 100%;
         background-color: white;
         border-bottom: 1px solid $gray-400;
         padding-top: 1rem;
-        a {
+        a,
+        div {
             display: block;
             padding-bottom: 1rem;
             color: black;
@@ -25,6 +26,13 @@ header {
             &:hover {
                 color: $gray-600;
             }
+            >button {
+                background: none;
+                border: 0;
+            }
+        }
+        .search-box {
+            display: none;
         }
     }
 }
@@ -66,28 +74,42 @@ header {
     display: block;
 }
 
-//Medium Screens
-@include md {
-    .logo {
-        //background: url(https://www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png) center center no-repeat;
-        //background-size: contain;
-        //width: 200px;
-    }
-}
-
+//Large Screens
 @include lg {
     header {
         display: flex;
         flex-wrap: wrap;
         background: $mssu-green;
         nav {
+            display: block;
             border-bottom: 0;
-            a {
+            a,
+            div {
                 display: inline-block;
                 padding: 0 .5rem;
+                position: relative;
+                >button {
+                    background: none;
+                    border: 0;
+                }
                 /*&:not(: last-child) {
                     border-right: 1px solid black;
                 }*/
+            }
+            .search-box {
+                display: none;
+                right: 0;
+                z-index: 90;
+                position: absolute;
+                margin-top: .5rem;
+                background: $gray-300;
+                padding: .5rem;
+                input {
+                    margin-right: .5rem;
+                }
+                &.visible {
+                    display: flex;
+                }
             }
         }
     }
@@ -127,11 +149,6 @@ header {
         justify-content: center;
         align-items: center;
         width: 50%;
-        li {
-            /*&:not(: last-child) {
-                border-right: 1px solid white;
-            }*/
-        }
         a {
             color: white;
             &:hover {
