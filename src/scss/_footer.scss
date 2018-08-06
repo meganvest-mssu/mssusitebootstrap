@@ -63,6 +63,18 @@ footer {
 }
 
 @include lg {
+    footer {
+        display: flex;
+
+        .footer-contact-links {
+            border: 0;
+            display: flex;
+        }
+
+        .footer-social {
+            a {}
+        }
+    }
     .footer-logo {
         img {
             display: block;

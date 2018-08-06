@@ -47,6 +47,14 @@
     p {
         font-size: .8rem;
     }
+
+    .small-news-card {
+        div {
+            display: inline-block;
+            width: 48%;
+        }
+
+    }
 }
 
 @include lg {
@@ -56,11 +64,10 @@
             margin: 0 .5rem;
             &:nth-child(1) {
                 border-right: 3px solid $gray-300;
-                padding-right: 3rem;
-                width: calc(100% / 3 * 2);
+                padding-right: 3rem; //width: calc(100% / 3 * 2);
             }
             &:nth-child(2) {
-                width: calc(100% / 3 * 1);
+                //width: calc(100% / 3 * 1);
             }
         }
         img {
@@ -73,6 +80,6 @@
         }
     }
     .news-crossroads {
-        flex: 2;
+        //flex: 2;
     }
 }
