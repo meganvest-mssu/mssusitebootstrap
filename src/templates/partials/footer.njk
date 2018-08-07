@@ -1,47 +1,40 @@
-<!-- Footer -->
+<!-- Footer -->{% from "macros/_link.njk" import link %} {% from "macros/_social_icon.njk" import social_icon %}
 <footer>
     <picture class="footer-logo">
-        <source media="(min-width: 992px)" srcset="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png">
-        <source srcset="//www.mssu.edu/images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png"> <img src="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png" class=""> </picture>
-    <nav class="footer-common-links">
-        <ul>
-            <li><a class="text-white" href="#">News &amp; Events</a></li>
-            <li><a class="text-white" href="#">Testimonials</a></li>
-            <li><a class="text-white" href="#">Campus Security</a></li>
-            <li><a class="text-white" href="#">Accessibility Statement</a></li>
-            <li><a class="text-white" href="#">Sitemap</a></li>
-        </ul>
+        <source media="(min-width: 992px)" srcset="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png">
+        <source srcset="//www.mssu.edu/images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png"> 
+        <img src="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png" class=""> 
+    </picture>
+    <nav class="footer-common-links"> 
+        {{ link("News & Events", "/news")}} 
+        {{ link("Testimonials", "/testimonials") }} 
+        {{ link("Campus Security", "/secrity")}} 
+        {{ link("Accessibility Statement", "/accessisibility")}} 
+        {{ link("Sitemap", "/sitemap")}}
     </nav>
     <nav class="footer-cta">
-        <ul class="">
-            <li><a class="" href="/moreinfo">Request More Information</a></li>
-            <li><a class="" href="/visit">Visit Campus</a></li>
-            <li><a class="" href="/apply">Apply</a></li>
-        </ul>
+        {{link("Request More Information", "/moreinfo")}}
+        {{link("Visit Campus", "/visit")}}
+        {{link("Apply", "/apply")}}
     </nav>
-    <nav class="footer-contact-links"> <a class="" href="/contact">Contact</a> <a class="" href="/directions">Directions</a> <a class="" href="/map">Map</a> <a class="" href="/employment">Employment</a> </nav>
-    <div class="footer-social">
-        <div class="">
-            <a href="/twitter" class=""> <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-2x fa-inverse no-underline"></i>
-                            <i class="fab fa-twitter fa-stack-1x"></i>
-                        </span> </a>
-            <a href="/insta" class=""> <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fab fa-instagram fa-stack-1x"></i>
-                        </span> </a>
-            <a href="/youtube" class=""> <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fab fa-youtube fa-stack-1x"></i>
-                        </span> </a>
-            <a href="/facebook" class=""> <span class="fa-stack fa-1x">
-                            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </span> </a>
-        </div>
-    </div> <address class="footer-contact">
-        <div><a class="" href="https://goo.gl/maps/pMbCe2wyYe62">3950 E. Newman Road - Joplin MO 64801</a></div>
-            <div><a class="" href="tel:1-866-818-6778">866-818-6778</a></div>
-            <div><a class="" href="mailto:info@mssu.edu">info@mssu.edu</a></div>
+    <nav class="footer-contact-links"> 
+        {{ link("Contact", "/contact")}} 
+        {{ link("Directions", "/directions")}} 
+        {{ link("Map", "/map")}} 
+        {{ link("Employment", "/employment")}} 
+    </nav>
+    <div>
+        <nav class="footer-social"> 
+            {{social_icon("twitter")}}
+            {{social_icon("facebook")}}
+            {{social_icon("youtube")}}
+            {{social_icon("instagram")}} 
+        </nav> 
+        <address class="footer-contact">
+            {{ link("3950 E. Newman Road - Joplin MO 64801", "//goo.gl/maps/pMbCe2wyYe62")}}
+            {{ link("866-818-6778", "tel:1-866-818-6778")}}
+            {{link("info@mssu.edu","mailto:info@mssu.edu")}}
             <div>&copy; 2018 Missouri Southern State University</div>
-    </address> </footer>
+        </address> 
+    </div>
+</footer>

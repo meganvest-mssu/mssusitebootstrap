@@ -1,14 +1,11 @@
 /* Footer css */
 
 footer {
+    margin-top: 4rem; //really just for testing
     padding: 1rem;
     background: $mssu-green;
-    a,
-    li {
+    a {
         color: white;
-    }
-    ul {
-        list-style: none;
     }
 }
 
@@ -22,26 +19,28 @@ footer {
     }
 }
 
-.footer-common-links {
+.footer-common-links,
+.footer-cta {
     display: inline-block;
-    text-align: right;
-    width: 45%;
+    vertical-align: top;
+    width: 49%;
+    padding: 0 1rem;
+    a {
+        display: block;
+    }
 }
 
-.footer-cta {
-    display: inline-block; //border: 1px solid black;
-    vertical-align: top;
-    width: 45%;
+.footer-common-links {
+    text-align: right;
 }
 
 .footer-contact-links {
     border-top: 1px solid white;
     padding-top: 2rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     a {
         margin: 0 1rem;
-        width: 20%;
     }
 }
 
@@ -57,31 +56,38 @@ footer {
 .footer-contact {
     font-size: .7rem;
     text-align: center;
-    width: 100%;
-    margin: 0 auto;
     color: white;
+    a {
+        display: block;
+    }
 }
 
 @include lg {
     footer {
         display: flex;
-
-        .footer-contact-links {
-            border: 0;
-            display: flex;
-        }
-
-        .footer-social {
-            a {}
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .footer-logo {}
+    .footer-common-links,
+    .footer-cta {
+        width: auto;
+        padding: 0 1rem;
+        a {
+            display: block;
         }
     }
-    .footer-logo {
-        img {
+    .footer-contact-links {
+        border: 0;
+        padding-top: 2rem;
+        text-align: center;
+        margin: 0;
+        padding: 0 1rem;
+        vertical-align: top;
+        a {
             display: block;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 1rem;
+            margin: 0;
         }
     }
 }

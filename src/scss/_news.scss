@@ -47,13 +47,16 @@
     p {
         font-size: .8rem;
     }
+}
 
-    .small-news-card {
-        div {
-            display: inline-block;
-            width: 48%;
+.small-news-card {
+    div {
+        vertical-align: middle;
+        display: inline-block;
+        width: 48%;
+        &:last-child {
+            padding-left: 1rem;
         }
-
     }
 }
 
