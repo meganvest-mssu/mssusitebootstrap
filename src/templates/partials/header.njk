@@ -1,3 +1,4 @@
+<! -- Header -->
 <header>
     <label for="nav-toggle" class="nav-toggle-label"><i class="fas fa-bars fa-2x"></i></label>
     <h1 aria-label="Missouri Southern State University" class="header-logo">
@@ -16,15 +17,16 @@
     </nav>
     <nav class="nav-sales"> <a href="/students">Academics</a> <a href="/students">Admissions &amp; Aid</a> <a href="/students">Life at MOSO</a> <a href="/students">Athletics</a> <a href="/students">About MOSO</a> </nav> <img src="https://yourstolose.mssu.edu/wp-content/uploads/2017/08/MSSU_ComboWordmark-Horizontal-Lantern-WhiteText.png" class="top-lantern"> </header>
 <script>
-    $(function () {
-        $(".search-link").click(function () {
+    $(function() {
+        $(".search-link").click(function() {
             $(".search-box").toggleClass('visible');
             if ($(".search-box").css('display') == 'none' && $(".search-box").hasClass('visible') == true) {
                 window.location.href = "/search";
-            }
-            else {
+            } else {
                 $(".search-box > input").focus();
             }
         });
     });
+
 </script>
+<! -- Header END -->

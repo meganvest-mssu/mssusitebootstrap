@@ -1,40 +1,30 @@
 <!-- Footer -->{% from "macros/_link.njk" import link %} {% from "macros/_social_icon.njk" import social_icon %}
 <footer>
-    <picture class="footer-logo">
-        <source media="(min-width: 992px)" srcset="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png">
-        <source srcset="//www.mssu.edu/images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png"> 
-        <img src="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png" class=""> 
-    </picture>
-    <nav class="footer-common-links"> 
-        {{ link("News & Events", "/news")}} 
-        {{ link("Testimonials", "/testimonials") }} 
-        {{ link("Campus Security", "/secrity")}} 
-        {{ link("Accessibility Statement", "/accessisibility")}} 
-        {{ link("Sitemap", "/sitemap")}}
-    </nav>
-    <nav class="footer-cta">
-        {{link("Request More Information", "/moreinfo")}}
-        {{link("Visit Campus", "/visit")}}
-        {{link("Apply", "/apply")}}
-    </nav>
-    <nav class="footer-contact-links"> 
-        {{ link("Contact", "/contact")}} 
-        {{ link("Directions", "/directions")}} 
-        {{ link("Map", "/map")}} 
-        {{ link("Employment", "/employment")}} 
-    </nav>
     <div>
-        <nav class="footer-social"> 
-            {{social_icon("twitter")}}
-            {{social_icon("facebook")}}
-            {{social_icon("youtube")}}
-            {{social_icon("instagram")}} 
-        </nav> 
-        <address class="footer-contact">
+        <picture class="footer-logo">
+            <source media="(min-width: 992px)" srcset="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png">
+            <source srcset="//www.mssu.edu/images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png">
+            <img src="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png" class="">
+        </picture>
+        <nav class="footer-common-links">
+            {{ link("News & Events", "/news")}} {{ link("Testimonials", "/testimonials") }} {{ link("Campus Security", "/secrity")}} {{ link("Accessibility Statement", "/accessisibility")}} {{ link("Sitemap", "/sitemap")}}
+        </nav>
+        <nav class="footer-cta">
+            {{link("Request More Information", "/moreinfo")}} {{link("Visit Campus", "/visit")}} {{link("Apply", "/apply")}}
+        </nav>
+        <nav class="footer-contact-links">
+            {{ link("Contact", "/contact")}} {{ link("Directions", "/directions")}} {{ link("Map", "/map")}} {{ link("Employment", "/employment")}}
+        </nav>
+        <div>
+            <nav class="footer-social">
+                {{social_icon("twitter")}} {{social_icon("facebook")}} {{social_icon("youtube")}} {{social_icon("instagram")}}
+            </nav>
+            <address class="footer-contact">
             {{ link("3950 E. Newman Road - Joplin MO 64801", "//goo.gl/maps/pMbCe2wyYe62")}}
             {{ link("866-818-6778", "tel:1-866-818-6778")}}
             {{link("info@mssu.edu","mailto:info@mssu.edu")}}
             <div>&copy; 2018 Missouri Southern State University</div>
-        </address> 
+        </address>
+        </div>
     </div>
 </footer>

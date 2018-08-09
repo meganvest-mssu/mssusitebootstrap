@@ -26,6 +26,7 @@
     border: 1px solid black;
     padding: 0rem;
     margin-bottom: 1rem;
+
 }
 
 .event-card-date-info,
@@ -70,5 +71,10 @@
     .event-card {
         flex: 1;
         max-width: 25%;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        transition: box-shadow .5s ease;
+        &:hover {
+            box-shadow: 7px 7px 15px rgba(0, 0, 0, .3);
+        }
     }
 }

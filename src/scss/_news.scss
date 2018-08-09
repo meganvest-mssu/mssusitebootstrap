@@ -24,6 +24,11 @@
         a {
             &:after {
                 content: ' >>';
+                transition: padding-left .3s ease-in-out;
+            }
+            &:hover:after {
+
+                padding-left: .5rem;
             }
         }
     }

@@ -63,7 +63,9 @@ footer {
 }
 
 @include lg {
-    footer {
+    footer > div {
+        margin: 0 auto;
+        max-width: 960px;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -78,12 +80,21 @@ footer {
             display: block;
         }
     }
+    .footer-social {
+        a {
+            &:hover {
+                text-decoration: none;
+                color: $mssu-gold;
+            }
+        }
+    }
     .footer-contact-links {
         border: 0;
+        border-left: 1px solid $mssu-gold;
         padding-top: 2rem;
-        text-align: center;
+        text-align: right;
         margin: 0;
-        padding: 0 1rem;
+        padding: 0 1rem 0 2rem;
         vertical-align: top;
         a {
             display: block;
