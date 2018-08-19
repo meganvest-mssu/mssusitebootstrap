@@ -1,10 +1,3 @@
-//Content filler for example
-.content {
-    height: 200vh;
-    background-image: url(https://images.unsplash.com/photo-1454372182658-c712e4c5a1db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=222a0154798d92d5950fd34abd985a18&auto=format&fit=crop&w=500&q=60);
-    background-size: cover;
-}
-
 //Nav styles start here
 header {
     background: $mssu-green;
@@ -92,10 +85,10 @@ header {
                     background: none;
                     border: 0;
                 }
-                &:not(:last-child){
+                &:not(:last-child) {
                     border-right: 1px solid $gray-400;
                 }
-                
+
             }
             .search-box {
                 display: none;
@@ -126,6 +119,7 @@ header {
     }
     .top-lantern {
         display: block;
+        z-index: 1;
         position: absolute;
         width: 250px;
         left: 50%;
