@@ -25,4 +25,17 @@
 @import "events";
 @import "testimonial";
 @import "news";
+@import "mvv-card";
 @import "styles-extra";
+
+
+
+//Other main styles that might eventually go in an import
+@include lg {
+    .flexbox-responsive {
+        display: flex;
+    }
+    .flex-justify {
+        justify-content: space-around;
+    }
+}

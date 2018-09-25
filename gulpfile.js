@@ -26,9 +26,9 @@ gulp.task('serve', ['scss', 'nunjucks', 'js'], function () {
 // Converting njk files to html
 gulp.task('nunjucks', function () {
     return gulp.src('src/pages/**/*.+(html|njk|nunjucks)')
-        .pipe(data(function () {
+        /*.pipe(data(function () {
             return requireUncached('./src/data/test.json');
-        }))
+        }))*/
         .pipe(nunjucksRender({
             path: ['src/templates/']
         })).pipe(gulp.dest('dist')).pipe(reload({

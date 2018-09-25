@@ -1,0 +1,10 @@
+{% macro mvv_card(title, paragraph, img, color, fontcolor='black') %}
+<div class="mvv-card drop-shadow" style="display: flex; flex-direction: column;">
+    <div>
+        <h1>{{title}}</h1>
+    </div>
+    <div style="background: {{color}}; color: {{ fontcolor}}">
+        {{paragraph | safe }}
+    </div>
+</div>
+{% endmacro %}
