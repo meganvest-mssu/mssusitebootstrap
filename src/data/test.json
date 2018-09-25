@@ -1,0 +1,56 @@
+{
+    "name": "Name homeer",
+    "url": "/about",
+    "title": "Brian JSONs",
+    "content": "<h1>Hello World</h1>"
+}
+
+{
+    "story": {
+        "name": "The key concept",
+        "created_at": "2017-10-16T13:34:50.709Z",
+        "published_at": "2018-06-06T07:40:37.836Z",
+        "alternates": [],
+        "id": 62907,
+        "uuid": "fea3004b-4878-481e-ab25-7456e7542cfd",
+        "content": {
+            "_uid": "b260ebde-aa9d-4a6a-8cfa-a009736fa809",
+            "body": [{
+                "_uid": "317dfaf6-b934-4e2a-a212-5697aeb39bf9",
+                "text": "The key concepts behind Storyblok are inspired by the [BEM methodology](http://getbem.com/). One way this manifests itself is through the relationship between developer and editor. For example, the editor of one content entry can create a flat or nested tree of components defined by developers and input content through  fields which are also pre-defined by developers. \n\n## Root Components = Content Types\n\nStoryblok allows you to create content types that define the structure of your content at the root level. If you create a new project, you will have one content type that's called \"page\". For things like news articles, blog posts or products you can define new content types that have a different structure than that of a simple page. Here's an example of a news article:\n\n~~~json\n{\n  \"component\":\"article\",\n  \"title\": \"Your title\",\n  \"text\": \"#Lorem ipsum dolor sit amet, consectetur adipiscing elit. In erat mauris, faucibus quis pharetra sit amet, pretium ac libero. Etiam vehicula eleifend bibendum.\\n ## Morbi gravida\\n metus ut sapien condimentum sodales mollis augue sodales. Vestibulum quis quam at sem placerat aliquet. Curabitur a felis at sapien ullamcorper fermentum. Mauris molestie arcu et lectus iaculis sit amet eleifend eros posuere. Fusce nec porta orci.\",\n  \"image\": \"//a.storyblok.com/f/...\"\n}\n~~~\n\n\n## Nested Components\n\nOne major difference between Storyblok and other CMS is the possibility to nest components as deep as you want them to be nested. What's the advantage of this? Here's an example:\n\n~~~\n{\n  \"component\": \"grid\",\n  \"columns\": [{\n      \"component\": \"column\",\n      \"width\": \"1-4\",\n      \"content\": [{\n        \"component\": \"markdown\",\n        \"text\": \"Nest components using an intuitive editor\"\n      }]\n    },\n    {\n      \"component\": \"column\",\n      \"width\": \"1-2\",\n      \"content\": [{\n        \"component\": \"image\",\n        \"src\": \"//a.storyblok.com/f/...\"\n      }]\n    }\n  ]\n}\n~~~\n\nA structure like this allows your editor to change the layout of pages and reuse components you've already created. You can create astoundingly flexible layouts for your customers and reuse them in different places of your website to minimize duplicated work and improve productivity. \n\n## What would this page look like?\n\nWant to see how all this code looks to the customer? You can see it for yourself by checking out the JSON which we use to render the page. Go ahead and open the [link below](https://api.storyblok.com/v1/cdn/stories/docs/the-key-concept?version=published\u0026token=miQeEopSce7bklQFVbBozQtt).\n\n~~~html\nhttps://api.storyblok.com/v1/cdn/stories/docs/the-key-concept?token=miQeEopSce7bklQFVbBozQtt\n~~~\n\nYou can replace `docs/the-key-concept` in the URL with any other slug you can find on [www.storyblok.com](https://www.storyblok.com).",
+                "above": false,
+                "title": "",
+                "spacings": [],
+                "component": "markdown",
+                "non_facing_name": ""
+            }],
+            "intro": "",
+            "title": "The Key concept",
+            "layout": "docs",
+            "console": "",
+            "cta_link": "",
+            "cta_text": "",
+            "hide_cta": false,
+            "redirect": {
+                "id": "",
+                "url": "",
+                "linktype": "url",
+                "fieldtype": "multilink",
+                "cached_url": ""
+            },
+            "subtitle": "",
+            "component": "root",
+            "teaser_style": [],
+            "header_component": []
+        },
+        "slug": "the-key-concept",
+        "full_slug": "docs/the-key-concept",
+        "sort_by_date": null,
+        "position": 100,
+        "tag_list": ["Proof read"],
+        "is_startpage": false,
+        "parent_id": 40774,
+        "meta_data": null,
+        "group_id": "6501843f-b29c-44d9-94aa-35f390d89dcf"
+    }
+}

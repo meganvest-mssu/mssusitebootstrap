@@ -1,7 +1,8 @@
 <!-- News Section -->
 <section class="section-news">
     <div class="news-header">
-        <h2><span>MOSO</span>News</h2> </div>
+        <h2><span>MOSO</span>News</h2>
+    </div>
     <div class="news-stories">
         <div class="news-crossroads">
             <h3><a href="#" title="Read more Crossroads stories">Crossroads Stories</a></h3>
@@ -15,13 +16,13 @@
 </section>
 <script>
     <!-- When document is ready dynmically load news content -->
-    $(function () {
+    $(function() {
         getCrossroadsContent();
         getMosoMinuteContent();
     })
 
     function getCrossroadsContent() {
-        $.get('//crossroads.mssu.edu/wp-json/wp/v2/posts?_embed', function (data) {
+        $.get('//crossroads.mssu.edu/wp-json/wp/v2/posts?_embed', function(data) {
             for (var i = 1; i <= 2; i++) {
                 var currentStory = data[i];
                 $(".news-crossroads-stories").append(buildNewsCard(currentStory));
@@ -30,7 +31,7 @@
     }
 
     function getMosoMinuteContent() {
-        $.get('//crossroads.mssu.edu/wp-json/wp/v2/posts?_embed', function (data) {
+        $.get('//moso-minute.mssu.edu/wp-json/wp/v2/posts?_embed', function(data) {
             for (var i = 1; i <= 3; i++) {
                 var currentStory = data[i];
                 $(".news-moso_minute-stories").append(buildSmallNewsCard(currentStory));
@@ -40,7 +41,8 @@
 
     function buildNewsCard(data) {
         var template = `<li>
-                    <h4><a href="${data.link}">${data.title.rendered}</a></h4> <img src="${data._embedded['wp:featuredmedia'][0].source_url}">
+                    <h4><a href="${data.link}">${data.title.rendered}</a></h4> 
+                    <a href="${data.link}"><img src="${data._embedded['wp:featuredmedia'][0].source_url}"></a>
                     <p>${data.excerpt.rendered}</p>
                 </li>`;
         return template;
@@ -50,7 +52,7 @@
         var template = `<li class="small-news-card">
 
                     <div>
-                        <img src="${data._embedded['wp:featuredmedia'][0].source_url}">
+                        <a href="${data.link}"><img src="${data._embedded['wp:featuredmedia'][0].source_url}"></a>
                     </div>
                     <div>
                         <h4><a href="${data.link}">${data.title.rendered}</a></h4> 
@@ -59,5 +61,6 @@
                 </li>`;
         return template;
     }
+
 </script>
 <!-- End News Section -->

@@ -7,28 +7,14 @@
     </h1>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <nav class="nav-audience"> <a href="/students">Students</a> <a href="/students">Parents</a> <a href="/students">Facutly &amp; Staff</a> <a href="/students">Alumni</a> </nav>
-    <nav class="nav-common"> <a href="/students">News</a> <a href="/students">Calendar</a> <a href="/students">Map</a> <a href="/students">Giving</a>
-        <div>
-            <button href="/students" class="search-link" aria-label="Search MSSU"><i class="fas fa-search"></i></button>
-            <form class="search-box" action="/search">
-                <input id="search" name="search">
-                <button>Search</button>
-            </form>
-        </div>
+    <nav class="nav-common">
+        <a href="/news" title="View MSSU News">News</a>
+        <a href="/calendar" title="View our university calendar">Calendar</a>
+        <a href="/map" title="View our campus map">Map</a>
+        <a href="/giving" title="Learn how to give back to MSSU">Giving</a>
+        <a href="/search" title="Search MSSU website" class="search-link"><i class="fas fa-search"></i></a>
     </nav>
     <nav class="nav-sales"> <a href="/students">Academics</a> <a href="/students">Admissions &amp; Aid</a> <a href="/students">Life at MOSO</a> <a href="/students">Athletics</a> <a href="/students">About MOSO</a> </nav>
 </header>
-<script>
-    $(function() {
-        $(".search-link").click(function() {
-            $(".search-box").toggleClass('visible');
-            if ($(".search-box").css('display') == 'none' && $(".search-box").hasClass('visible') == true) {
-                window.location.href = "/search";
-            } else {
-                $(".search-box > input").focus();
-            }
-        });
-    });
 
-</script>
 <! -- Header END -->
