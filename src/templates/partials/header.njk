@@ -14,7 +14,23 @@
         <a href="/giving" title="Learn how to give back to MSSU">Giving</a>
         <a href="/search" title="Search MSSU website" class="search-link"><i class="fas fa-search"></i></a>
     </nav>
-    <nav class="nav-sales"> <a href="/students">Academics</a> <a href="/students">Admissions &amp; Aid</a> <a href="/students">Life at MOSO</a> <a href="/students">Athletics</a> <a href="/students">About MOSO</a> </nav>
+    <nav class="nav-sales"> 
+        <div class="dropdown">
+            <a href="#academics" class="dropdown-button">Academics</a>
+            <div class="dropdown-content">
+                <a href="google.com">Google</a>
+                <a href="google.com">Google</a>
+                <a href="google.com">Google</a>
+            </div>
+        </div>
+        <a href="/students">Admissions &amp; Aid</a> 
+        <a href="/students">Life at MOSO</a> 
+        <a href="/students">Athletics</a> 
+        <a href="/students">About MOSO</a> </nav>
 </header>
+
+<script>
+    $('.dropdown').click(() => { $('.dropdown-content').toggle('red') });
+</script>
 
 <! -- Header END -->

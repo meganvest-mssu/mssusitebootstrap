@@ -67,6 +67,22 @@ header {
     display: block;
 }
 
+
+//Dropdown styling
+.red{
+    color:red;
+    //display: block;
+}
+
+.dropdown-content{
+    //display: none;
+}
+
+
+
+
+
+
 //Large Screens
 @include lg {
     header {
