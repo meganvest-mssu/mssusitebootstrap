@@ -1,0 +1,46 @@
+{% from "macros/_dropdown.njk" import dropdown %}
+   
+
+<nav class="nav-with-dropdowns nav-sales">
+     {{ dropdown('Academics', '/academics', [
+        {title: 'Schools', url: '/schools'},
+        {title: 'Undergrad', url: '/undergrad'},
+        {title: 'Graduate', url: '/graduate'},
+        {title: 'Continuing Education', url: '/continuing-education'},
+        {title: 'Academic Affairs', url: '/academic-affairs'},
+        {title: 'Library', url: '/library'}
+    ])}}
+      
+    {{ dropdown('Admissions &amp; Aid', '/admissions', [
+        {title: 'Apply', url: '/apply'},
+        {title: 'Admissions', url: '/admissions'},
+        {title: 'Visit', url: '/visit'},
+        {title: 'Financial Aid', url: '/aid'},
+        {title: 'For Accepted Students', url: '/accepted'}
+    ])}}
+    
+    {{ dropdown('Life at MOSO', '/life', [
+        {title: 'Apply', url: '/apply'},
+        {title: 'Admissions', url: '/admissions'},
+        {title: 'Visit', url: '/visit'}
+    ])}}
+    
+    {{ dropdown('Athletics', '/athletics', [
+        {title: 'MSSU Lion Homepage', url: '/apply'},
+        {title: 'Athletics Schedule', url: '/admissions'},
+        {title: 'MSSU Shop', url: '/visit'},
+        {title: 'Athletics Tickets', url: '/visit'}
+    ])}}
+    
+     {{ dropdown('About MOSO', '/about', [
+        {title: 'Apply', url: '/apply'},
+        {title: 'Admissions', url: '/admissions'},
+        {title: 'Visit', url: '/visit'}
+    ])}}
+</nav>
+
+
+<script>
+    $('.dropdown-button').click((el)=> { console.log($(el.currentTarget).parent().parent().toggleClass('expanded')) })
+    
+</script>

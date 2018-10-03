@@ -1,0 +1,99 @@
+.standard-navlist {
+    display: flex;
+    flex-direction: column;
+    background: white;
+
+    > a {
+        padding: .5rem 1rem;
+        font-size: 1.5rem;
+        color: black;
+        border-bottom: 1px solid black;
+        text-transform: uppercase;
+        min-height: 3rem;
+
+
+        &:hover {
+            background: $gray-300;
+            text-decoration: none;
+        }
+    }
+
+
+}
+
+.nav-circular {
+    a {
+        border: 0;
+        background-color: $mssu-green;
+        border-radius: 2rem;
+        margin: .5rem auto;
+        text-align: center;
+        color: white;
+        width: 15rem;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+.dropdown {
+    font-size: 1.5rem;
+    color: black;
+    text-transform: uppercase;
+
+    &:hover {
+        
+        a{
+            color: black;
+        }
+        
+        background: $gray-300;
+        text-decoration: none;
+    }
+}
+
+.dropdown-title{
+    align-items: stretch;
+    border-bottom: 1px solid black;
+}
+
+.dropdown-title-text {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: black;
+    text-transform: uppercase;
+    min-height: 3rem;
+
+
+    &:hover {
+        background: $gray-300;
+        text-decoration: none;
+    }
+}
+
+.dropdown-button {
+    padding: 0 1rem;
+
+    &:hover {
+        background-color: $gray-700;
+        cursor: pointer;
+        i {
+            color: $mssu-gold;
+        }
+    }
+}
+
+.dropdown-content {
+    a {
+        border-bottom: 1px solid black;
+        padding: 1rem 0 1rem 2rem;
+        color: black;
+        background: $gray-200;
+
+        &:hover {
+            text-decoration: none;
+            color: $mssu-green;
+        }
+    }
+}

@@ -1,4 +1,6 @@
 <! -- Header -->
+{% from "macros/_standard_navlist.njk" import standard_navlist %}
+
 <header>
     <img src="https://yourstolose.mssu.edu/wp-content/uploads/2017/08/MSSU_ComboWordmark-Horizontal-Lantern-WhiteText.png" class="top-lantern" />
     <label for="nav-toggle" class="nav-toggle-label"><i class="fas fa-bars fa-2x"></i></label>
@@ -6,31 +8,80 @@
         <a class="logo" href="/"></a>
     </h1>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <nav class="nav-audience"> <a href="/students">Students</a> <a href="/students">Parents</a> <a href="/students">Facutly &amp; Staff</a> <a href="/students">Alumni</a> </nav>
+  <!--  <nav class="nav-audience"> 
+        <a href="/students">Students</a> 
+        <a href="/students">Parents</a> 
+        <a href="/students">Facutly &amp; Staff</a> 
+        <a href="/students">Alumni</a> 
+    </nav>
     <nav class="nav-common">
         <a href="/news" title="View MSSU News">News</a>
         <a href="/calendar" title="View our university calendar">Calendar</a>
         <a href="/map" title="View our campus map">Map</a>
         <a href="/giving" title="Learn how to give back to MSSU">Giving</a>
         <a href="/search" title="Search MSSU website" class="search-link"><i class="fas fa-search"></i></a>
-    </nav>
-    <nav class="nav-sales"> 
-        <div class="dropdown">
-            <a href="#academics" class="dropdown-button">Academics</a>
-            <div class="dropdown-content">
-                <a href="google.com">Google</a>
-                <a href="google.com">Google</a>
-                <a href="google.com">Google</a>
-            </div>
-        </div>
+    </nav>-->
+   <!-- <nav class="nav-sales"> 
+        <a href="#academics" class="dropdown-button">Academics</a>
         <a href="/students">Admissions &amp; Aid</a> 
         <a href="/students">Life at MOSO</a> 
         <a href="/students">Athletics</a> 
-        <a href="/students">About MOSO</a> </nav>
+        <a href="/students">About MOSO</a> 
+    </nav>-->
+    
+    {{ standard_navlist('nav-audience nav-circular', [
+        {title:"Students", url:'/students'},
+        {title:"Parents", url:'/students'},
+        {title:"Facutly &amp; Staff", url:'/students'},
+        {title:"Alumni", url:'/students'}
+    ]) }}
+    
+    {{ standard_navlist('nav-common', [
+        {title:"News", url:'/students'},
+        {title:"Calendar", url:'/students'},
+        {title:"Map", url:'/students'},
+        {title:"Giving", url:'/students'},
+        {title:"&nbsp;", url:'/search', class:'fas fa-search', longtitle: "Search MSSU"}
+    ]) }}
+    
+ 
+    
+    {{ standard_navlist('nav-sales nav-with-dropdowns', [
+        {title:"Academics", url:'/academics', dropdowns:[
+            {title: 'Schools', url: '/schools'},
+            {title: 'Undergrad', url: '/undergrad'},
+            {title: 'Graduate', url: '/graduate'},
+            {title: 'Continuing Education', url: '/continuing-education'},
+            {title: 'Academics Affairs', url: '/academic-affairs'},
+            {title: 'Library', url: '/library'}
+            ]},
+        {title:"Admissions &amp; Aid", url:'/admissions',dropdowns:[
+            {title: 'Apply', url: '/apply'},
+            {title: 'Admissions', url: '/admissions'},
+            {title: 'Visit', url: '/visit'},
+            {title: 'Financial Aid', url: '/aid'},
+            {title: 'For Accepted Students', url: '/accepted-students'}
+            ]},
+        {title:"Life at MOSO", url:'/life',dropdowns:[
+            {title: 'Rez Life', url: '/res-life'},
+            {title: 'Get Involved', url: '/involvement'},
+            {title: 'Campus', url: '/campus'},
+            {title: 'Health &amp; Safety', url: '/health-safety'},
+            {title: 'After MOSO', url: '/alumni'}
+            ]},
+        {title:"Athletics", url:'/athletics',dropdowns:[
+            {title: 'MSSU Lions Home Page', url: 'http://www.mssulions.com'},
+            {title: 'Athletics Schedule', url: '/schedule'},
+            {title: 'MSSU Shop', url: '/mssushop'},
+            {title: 'Athletics Tickets', url: '/tickets'}
+            ]}
+    ]) }} 
+    
+    {# include "partials/responsive_dropdown.njk" #}
 </header>
 
 <script>
-    $('.dropdown').click(() => { $('.dropdown-content').toggle('red') });
+    $('.dropdown-button').click((el)=> { console.log($(el.currentTarget).parent().parent().toggleClass('expanded')) })
 </script>
 
 <! -- Header END -->

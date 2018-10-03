@@ -1,7 +1,7 @@
 //Nav styles start here
 header {
     background: $mssu-green;
-    nav {
+    /*nav {
         display: none;
         position: relative;
         text-align: center;
@@ -27,7 +27,11 @@ header {
         .search-box {
             display: none;
         }
-    }
+    }*/
+    
+    
+    
+    
 }
 
 .header-logo {
@@ -77,7 +81,7 @@ header {
         display: flex;
         flex-wrap: wrap;
         background: $mssu-green;
-        nav {
+        /*nav {
             display: block;
             border-bottom: 0;
             a,
@@ -109,7 +113,7 @@ header {
                     display: flex;
                 }
             }
-        }
+        }*/
     }
     .header-logo {
         width: 25%;
@@ -134,7 +138,8 @@ header {
     .nav-toggle-label {
         display: none;
     }
-    .nav-audience,
+    
+    /*.nav-audience,
     .nav-common {
         padding: .5rem 0;
         margin: 0;
@@ -154,5 +159,5 @@ header {
                 color: white;
             }
         }
-    }
+    }*/
 }

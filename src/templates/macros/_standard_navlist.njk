@@ -1,0 +1,12 @@
+{% from "macros/_dropdown.njk" import dropdown %} 
+{% macro standard_navlist(class, links) %}
+<nav class="standard-navlist {{ class }}">
+    {% for link in links %} 
+        {% if link.dropdowns %}
+            {{ dropdown(link.title, link.url, link.dropdowns)}} 
+        {% else %}
+            <a href="{{ link.url }}" class="{{ link.class }}" title="{{ link.longtitle if link.longtitle else link.title | safe }}">{{ link.title | safe }}</a> 
+        {% endif %}
+    {% endfor %}
+</nav>
+{% endmacro %}
