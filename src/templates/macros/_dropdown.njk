@@ -7,7 +7,7 @@
     <div class="dropdown-content">
        <h1>{{ title | safe }}</h1>
         {% for dropdown in dropdowns %}
-        <a href="{{ dropdown.url}}">{{ dropdown.title }}</a>
+        <a href="{{ dropdown.url}}">{{ dropdown.title | safe }}</a>
         {% endfor %}
     </div>
 </div>
