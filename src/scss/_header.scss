@@ -1,163 +1,111 @@
-//Nav styles start here
-header {
-    background: $mssu-green;
-    /*nav {
-        display: none;
-        position: relative;
-        text-align: center;
-        width: 100%;
-        background-color: white;
-        border-bottom: 1px solid $gray-400;
-        padding-top: 1rem;
-        a,
-        div {
-            display: block;
-            padding-bottom: 1rem;
-            color: black;
-            text-decoration: none;
-            text-transform: uppercase;
-            &:hover {
-                color: $gray-600;
-            }
-            > button {
-                background: none;
-                border: 0;
-            }
-        }
-        .search-box {
-            display: none;
-        }
-    }*/
-    
-    
-    
-    
-    
+.top-lantern{
+    //display: none;
+    width: 130px;
 }
 
-.header-logo {
-    text-align: center;
-    margin: 0;
-}
-
-.logo {
-    display: inline-block; //background: url(https://www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png) center center no-repeat;
-    background: url(https://www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png) center center no-repeat;
-    background-size: contain;
-    width: 275px;
-    height: 80px;
-}
-
-.top-lantern {
-    display: none;
-}
-
-.nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    color: white;
-    position: absolute;
+#nav-toggle{
     cursor: pointer;
-    top: 0;
-    left: 0;
-    margin-left: 1em;
-    height: 80px;
+}
+
+.navbox {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    transition: left .7s;
 }
 
-.nav-toggle:checked ~ nav {
-    display: block;
+.closed {
+    left: -100%;
+}
+
+.nav-audience{
+    padding-top: 3rem;
+    order: 2
+}
+
+.nav-common{
+    order: 0;
+}
+
+.nav-sales{
+    order: 1;
+}
+
+.nav-circular {
+    a {
+        border: 0;
+        background-color: $mssu-green;
+        border-radius: 2rem;
+        margin: .5rem auto;
+        text-align: center;
+        color: white;
+        width: 15rem;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+#navrow2{
+    display: none;
 }
 
 
-
-
-
-//Large Screens
 @include lg {
-    header {
-        display: flex;
-        flex-wrap: wrap;
-        background: $mssu-green;
-        /*nav {
-            display: block;
-            border-bottom: 0;
-            a,
-            div {
-                display: inline-block;
-                padding: 0 .5rem;
-                position: relative;
-                > button {
-                    background: none;
-                    border: 0;
-                }
-                &:not(:last-child) {
-                    border-right: 1px solid $gray-400;
-                }
 
-            }
-            .search-box {
-                display: none;
-                right: 0;
-                z-index: 90;
-                position: absolute;
-                margin-top: .5rem;
-                background: $gray-300;
-                padding: .5rem;
-                input {
-                    margin-right: .5rem;
-                }
-                &.visible {
-                    display: flex;
-                }
-            }
-        }*/
-    }
-    .header-logo {
-        width: 25%;
-        padding-left: 1em;
-    }
-    .logo {
-        background: url(https://www.mssu.edu/_resources/images/MSSU_ComboWordmark-Stacked-SIDELantern-GoldText.png) center center no-repeat;
-        background-size: contain;
-        width: 300px;
-    }
     .top-lantern {
-        display: block;
-        z-index: 1;
+        display: none;
+        width: 330px;
         position: absolute;
-        width: 250px;
-        left: 50%;
-        margin-left: -125px;
-        clip: rect(0px, 200px, 70px, 0px);
-        margin-top: 5px;
+        z-index: 3;
+        margin: 0 auto;
     }
-    .nav-toggle-label {
+
+    #nav-toggle {
         display: none;
     }
     
-    /*.nav-audience,
-    .nav-common {
-        padding: .5rem 0;
-        margin: 0;
-        order: -1;
-        width: 50%;
+    #navrow2 {
+        display: block;
+        min-height: 5rem;
+        background-color: $mssu-green;
     }
-    .nav-sales {
-        display: flex;
-        background: none;
+
+    .navbox {
+        max-width: 900px;
+        margin: 0 auto;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        a {
-            color: white;
-            &:hover {
-                color: white;
-            }
-        }
-    }*/
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .closed {
+        left: 0;
+    }
+
+    .nav-audience {
+        order: 0;
+        padding: 0;
+    }
+
+    .nav-common {
+        order: 0;
+    }
+
+    .nav-sales {
+        order: 0;
+        position: absolute;
+        margin: 0 auto;
+        width: 500px;
+        top: 5rem;
+        
+    }
+    
+    .nav-circular{
+        background-color: white;
+    }
 }

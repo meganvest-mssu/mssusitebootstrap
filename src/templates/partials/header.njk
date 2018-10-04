@@ -2,12 +2,10 @@
 {% from "macros/_standard_navlist.njk" import standard_navlist %}
 
 <header>
-    <img src="https://yourstolose.mssu.edu/wp-content/uploads/2017/08/MSSU_ComboWordmark-Horizontal-Lantern-WhiteText.png" class="top-lantern" />
-    <label for="nav-toggle" class="nav-toggle-label"><i class="fas fa-bars fa-2x"></i></label>
-    <h1 aria-label="Missouri Southern State University" class="header-logo">
-        <a class="logo" href="/"></a>
-    </h1>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <a id="nav-toggle" class="fas fa-bars fa-2x"></a>
+    
+    
+    
   <!--  <nav class="nav-audience"> 
         <a href="/students">Students</a> 
         <a href="/students">Parents</a> 
@@ -29,6 +27,9 @@
         <a href="/students">About MOSO</a> 
     </nav>-->
     
+    <div id="navbox" class="navbox closed">
+    
+    
     {{ standard_navlist('nav-audience nav-circular', [
         {title:"Students", url:'/students'},
         {title:"Parents", url:'/students'},
@@ -46,7 +47,7 @@
     
  
     
-    {{ standard_navlist('nav-sales nav-with-dropdowns', [
+    {{ standard_navlist('nav-sales', [
         {title:"Academics", url:'/academics', dropdowns:[
             {title: 'Schools', url: '/schools'},
             {title: 'Undergrad', url: '/undergrad'},
@@ -77,11 +78,18 @@
             ]}
     ]) }} 
     
-    {# include "partials/responsive_dropdown.njk" #}
+    </div>
+    
+    
+    
+    
 </header>
 
 <script>
-    $('.dropdown-button').click((el)=> { console.log($(el.currentTarget).parent().parent().toggleClass('expanded')) })
+    $('.dropdown-button').click((el)=> { $(el.currentTarget).parent().parent().toggleClass('expanded') });
+    $('#nav-toggle').click(()=> { $('#navbox').toggleClass('closed') });
+    
+    
 </script>
 
 <! -- Header END -->

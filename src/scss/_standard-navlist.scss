@@ -103,10 +103,10 @@
     .standard-navlist {
         display: flex;
         flex-direction: row;
-        background: white;
+        background: none;
 
         > a {
-            padding: .5rem 1rem;
+            //padding: .5rem 1rem;
             font-size: 1rem;
             color: black;
             border-bottom: 0;
@@ -115,22 +115,27 @@
 
 
             &:hover {
-                background: $gray-300;
-                text-decoration: none;
+                background: none;
+                text-decoration: inherit;
+            }
+            
+            &:not(:last-child){
+                border-right: 1px solid black;
+                //padding-left: 1rem;
             }
         }
-
+        
 
     }
 
     .nav-circular {
         a {
             border: 0;
-            background-color: $mssu-green;
+            background-color: white;
             border-radius: 0;
             margin: 0;
             text-align: center;
-            color: white;
+            color: black;
             width: inherit;
 
             &:hover {
@@ -143,6 +148,7 @@
         font-size: 1rem;
         color: black;
         text-transform: uppercase;
+        
 
         &:hover {
 
@@ -156,8 +162,7 @@
     }
 
     .dropdown-title {
-        align-items: stretch;
-        border-bottom: 1px solid black;
+        border: 0;
     }
 
     .dropdown-title-text {
@@ -187,6 +192,7 @@
     }
 
     .dropdown-content {
+        //position: absolute;
         a {
             border-bottom: 1px solid black;
             padding: 1rem 0 1rem 2rem;
