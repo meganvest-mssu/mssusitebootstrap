@@ -9,7 +9,7 @@ var newer = require('gulp-newer');
 var reload = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
 var source = require('vinyl-source-stream');
-var request = require('request');
+var request = require('gulp-request');
 var streamify = require('gulp-streamify');
 
 var src = {
