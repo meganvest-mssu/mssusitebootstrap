@@ -2,52 +2,33 @@
 {% from "macros/_standard_navlist.njk" import standard_navlist %}
 
 <header>
+   <div id="mobile-header">
     <a id="nav-toggle" class="fas fa-bars fa-2x"></a>
+    <a href="/" title="MSSU Home"><img src="https://www.mssu.edu/_resources/images/MSSU_Lantern_50w.png" /></a>
+   </div>
+<a href="/" title="MSSU Home"><img id="lantern" src="https://www.mssu.edu/_resources/images/MSSU_Lantern_50w.png" /></a>
     
-    
-    
-  <!--  <nav class="nav-audience"> 
-        <a href="/students">Students</a> 
-        <a href="/students">Parents</a> 
-        <a href="/students">Facutly &amp; Staff</a> 
-        <a href="/students">Alumni</a> 
-    </nav>
-    <nav class="nav-common">
-        <a href="/news" title="View MSSU News">News</a>
-        <a href="/calendar" title="View our university calendar">Calendar</a>
-        <a href="/map" title="View our campus map">Map</a>
-        <a href="/giving" title="Learn how to give back to MSSU">Giving</a>
-        <a href="/search" title="Search MSSU website" class="search-link"><i class="fas fa-search"></i></a>
-    </nav>-->
-   <!-- <nav class="nav-sales"> 
-        <a href="#academics" class="dropdown-button">Academics</a>
-        <a href="/students">Admissions &amp; Aid</a> 
-        <a href="/students">Life at MOSO</a> 
-        <a href="/students">Athletics</a> 
-        <a href="/students">About MOSO</a> 
-    </nav>-->
-    
-    <div id="navbox" class="navbox closed">
+    <div id="navbox" class="navbox">
     
     
     {{ standard_navlist('nav-audience nav-circular', [
         {title:"Students", url:'/students'},
-        {title:"Parents", url:'/students'},
-        {title:"Facutly &amp; Staff", url:'/students'},
-        {title:"Alumni", url:'/students'}
+        {title:"Parents", url:'/parents'},
+        {title:"Facutly &amp; Staff", url:'/faculty-staff'},
+        {title:"Alumni", url:'/alumni'}
     ]) }}
     
     {{ standard_navlist('nav-common', [
-        {title:"News", url:'/students'},
-        {title:"Calendar", url:'/students'},
-        {title:"Map", url:'/students'},
-        {title:"Giving", url:'/students'},
-        {title:"&nbsp;", url:'/search', class:'fas fa-search', longtitle: "Search MSSU"}
+        {title:"News", url:'/news'},
+        {title:"Calendar", url:'/calendar'},
+        {title:"Map", url:'/map'},
+        {title:"Giving", url:'/giving'},
+        {title:"", url:'/search', class:'fas fa-search', longtitle: "Search MSSU"}
     ]) }}
     
  
     
-    {{ standard_navlist('nav-sales', [
+    {{ standard_navlist('nav-sales white', [
         {title:"Academics", url:'/academics', dropdowns:[
             {title: 'Schools', url: '/schools'},
             {title: 'Undergrad', url: '/undergrad'},
@@ -82,12 +63,11 @@
     
     
     
-    
 </header>
 
 <script>
     $('.dropdown-button').click((el)=> { $(el.currentTarget).parent().parent().toggleClass('expanded') });
-    $('#nav-toggle').click(()=> { $('#navbox').toggleClass('closed') });
+    $('#nav-toggle').click(()=> { $('#navbox').toggleClass('open') });
     
     
 </script>
