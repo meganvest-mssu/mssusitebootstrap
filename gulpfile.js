@@ -8,12 +8,17 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var newer = require('gulp-newer');
 var reload = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
+var source = require('vinyl-source-stream');
+var request = require('request');
+var streamify = require('gulp-streamify');
+
 var src = {
     scss: 'src/scss/**/*.scss',
     css: 'src/css/',
     njk: 'src/**/*.njk',
     dist: 'dist/'
 };
+
 gulp.task('serve', ['scss', 'nunjucks', 'js'], function () {
     browserSync.init({
         open: false,
@@ -62,6 +67,17 @@ gulp.task('js', function () {
 });
 gulp.task('production', ['nunjucks', 'html', 'minify-css']);
 
+gulp.task('wordpress', function(){
+    
+    return request('http://crossroads.mssu.edu/wp-json/wp/v2/posts')
+        .pipe(source('wp.json'))
+        .pipe(streamify(function(s){
+              return console.log(s.length);
+    }));
+    
+    
+    
+});
 
 // De-caching for Data files
 function requireUncached( $module ) {
