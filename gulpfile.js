@@ -11,6 +11,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var source = require('vinyl-source-stream');
 var request = require('gulp-request');
 var streamify = require('gulp-streamify');
+var WP = require( 'wordpress-rest-api' );
 
 var src = {
     scss: 'src/scss/**/*.scss',
@@ -67,14 +68,26 @@ gulp.task('js', function () {
 });
 gulp.task('production', ['nunjucks', 'html', 'minify-css']);
 
-gulp.task('wordpress', function(){
-    
-    return request('http://crossroads.mssu.edu/wp-json/wp/v2/posts')
-        .pipe(source('wp.json'))
-        .pipe(streamify(function(s){
-              return console.log(s.length);
-    }));
-    
+gulp.task('wordpress', function () {
+            /* 
+             return request('http://crossroads.mssu.edu/wp-json/wp/v2/posts')
+                 .pipe(source('wp.json'))
+                 .pipe(streamify(function(s){
+                       return console.log(s.length);
+             }));*/
+
+
+            var wp = new WP({
+                endpoint: 'https://crossroads.mssu.edu/wp-json'
+            });
+
+            wp.posts().get(function (err, data) {
+                if (err) {
+                    // handle err
+                }
+                // do something with the returned posts
+                console.log(data[0].slug);
+            });
     
     
 });
