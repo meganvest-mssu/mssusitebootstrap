@@ -8,9 +8,6 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var newer = require('gulp-newer');
 var reload = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
-var source = require('vinyl-source-stream');
-var request = require('gulp-request');
-var streamify = require('gulp-streamify');
 var WP = require( 'wordpress-rest-api' );
 
 var src = {
@@ -68,29 +65,39 @@ gulp.task('js', function () {
 });
 gulp.task('production', ['nunjucks', 'html', 'minify-css']);
 
-gulp.task('wordpress', function () {
-            /* 
-             return request('http://crossroads.mssu.edu/wp-json/wp/v2/posts')
-                 .pipe(source('wp.json'))
-                 .pipe(streamify(function(s){
-                       return console.log(s.length);
-             }));*/
-
+gulp.task('wp', function () {
 
             var wp = new WP({
                 endpoint: 'https://crossroads.mssu.edu/wp-json'
             });
 
-            wp.posts().get(function (err, data) {
+
+
+            wp.posts().get(function (err, wpData) {
                 if (err) {
                     // handle err
                 }
                 // do something with the returned posts
-                console.log(data[0].slug);
+                console.log(wpData[0].name);
+	    return gulp.src('src/pages/wp.njk')
+        	.pipe(data({"posts":wpData}))
+        	.pipe(nunjucksRender({
+            		path: ['src/templates/']
+        	})).pipe(gulp.dest('dist'));
+	
             });
     
     
 });
+
+function wpDataFunc(){
+	return [{
+		name:"Brian"
+	},
+	{
+		name:"Amanda"
+	}]
+}
 
 // De-caching for Data files
 function requireUncached( $module ) {
