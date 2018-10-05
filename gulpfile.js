@@ -81,7 +81,7 @@ function getCrossroadsData(){
 
 
 
-            wp.posts().get(function (err, wpData) {
+            wp.posts().perPage(2).embed().get(function (err, wpData) {
                 if (err) {
                     // handle err
                 }
@@ -104,7 +104,7 @@ function getMMData(){
 
 
 
-            wp.posts().get(function (err, wpData) {
+            wp.posts().perPage(3).embed().get(function (err, wpData) {
                 if (err) {
                     // handle err
                 }
