@@ -67,6 +67,14 @@ gulp.task('production', ['nunjucks', 'html', 'minify-css']);
 
 gulp.task('wp', function () {
 
+	getCrossroadsData();   
+    
+});
+
+var crData = null;
+var mmData = null;
+
+function getCrossroadsData(){
             var wp = new WP({
                 endpoint: 'https://crossroads.mssu.edu/wp-json'
             });
@@ -78,26 +86,52 @@ gulp.task('wp', function () {
                     // handle err
                 }
                 // do something with the returned posts
-                console.log(wpData[0].name);
-	    return gulp.src('src/pages/wp.njk')
-        	.pipe(data({"posts":wpData}))
-        	.pipe(nunjucksRender({
-            		path: ['src/templates/']
-        	})).pipe(gulp.dest('dist'));
-	
+		crData = wpData;
+		getMMData();
             });
     
-    
-});
-
-function wpDataFunc(){
-	return [{
-		name:"Brian"
-	},
-	{
-		name:"Amanda"
-	}]
+ 
 }
+
+
+
+
+
+function getMMData(){
+         var wp = new WP({
+                endpoint: 'https://moso-minute.mssu.edu/wp-json'
+            });
+
+
+
+            wp.posts().get(function (err, wpData) {
+                if (err) {
+                    // handle err
+                }
+                // do something with the returned posts
+		mmData = wpData;
+		buildPage();
+            });
+    
+}
+
+function buildPage(){
+    	return gulp.src('src/pages/**/*.+(html|njk|nunjucks)')
+        	.pipe(data({"posts":crData, "mm_posts":mmData}))
+        	.pipe(nunjucksRender({
+            		path: ['src/templates/']
+        	})).pipe(gulp.dest('dist'))
+		.pipe(reload({
+            		stream: true
+        	}));
+		browserSync.init({
+        		open: false,
+        		server: "./dist"
+    		});
+
+}
+
+
 
 // De-caching for Data files
 function requireUncached( $module ) {
