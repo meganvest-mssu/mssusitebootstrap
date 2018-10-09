@@ -3,6 +3,7 @@
    
 <div class="tv">
 		  <div class="screen mute" id="tv"></div>
+<!--<iframe class="screen mute active" id="tv"  width="560" height="315" src="https://www.youtube.com/embed/jWxIMHbGt1o?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 	</div>
    
     <picture>
@@ -41,10 +42,10 @@ var tag = document.createElement('script');
 var firstScriptTag = document.getElementsByTagName('script')[0];
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var tv,
-		playerDefaults = {autoplay: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3};
+		playerDefaults = {autoplay: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3, loop: 1};
 var vid = [
-			{'videoId': '40rdBPclVII', 'startSeconds': 5, 'endSeconds': 60, 'suggestedQuality': 'hd720'},
-			{'videoId': '7LtjzQaFZ3k', 'startSeconds': 5, 'endSeconds': 17, 'suggestedQuality': 'hd720'},
+			{'videoId': 'jWxIMHbGt1o', 'suggestedQuality': 'hd720'},
+			{'videoId': 'jWxIMHbGt1o', 'suggestedQuality': 'hd720'}
 		],
 		randomVid = Math.floor(Math.random() * vid.length),
     currVid = randomVid;
@@ -56,7 +57,7 @@ function onYouTubePlayerAPIReady(){
 }
 
 function onPlayerReady(){
-  tv.loadVideoById(vid[currVid]);
+  tv.loadVideoById('jWxIMHbGt1o');
   tv.mute();
 }
 
@@ -71,7 +72,7 @@ function onPlayerStateChange(e) {
     } else {
       currVid++;  
     }
-    tv.loadVideoById(vid[currVid]);
+    tv.loadVideoById('jWxIMHbGt1o');
     tv.seekTo(vid[currVid].startSeconds);
   }
 }
