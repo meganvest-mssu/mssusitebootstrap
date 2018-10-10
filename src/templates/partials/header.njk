@@ -10,19 +10,20 @@
     
     <div id="navbox" class="navbox">
     
-    
     {{ standard_navlist('nav-audience nav-circular', [
-        {title:"Students", url:'/students'},
-        {title:"Parents", url:'/parents'},
-        {title:"Facutly &amp; Staff", url:'/faculty-staff'},
-        {title:"Alumni", url:'/alumni'}
+        {title:"Students", url:'/student.php'},
+        {title:"Parents", url:'/parents.php'},
+        {title:"Faculty &amp; Staff", url:'/faculty-staff.php'},
+        {title:"Alumni", url:'/advancement/almuni'}
     ]) }}
     
+   
+    
     {{ standard_navlist('nav-common', [
-        {title:"News", url:'/news'},
+        {title:"News", url:'/advancement/university-relations-marketing/press-and-media.php'},
         {title:"Calendar", url:'/calendar'},
-        {title:"Map", url:'/map'},
-        {title:"Giving", url:'/giving'},
+        {title:"Map", url:'/map.php'},
+        {title:"Giving", url:'/advancement/giving'},
         {title:"", url:'/search', class:'fas fa-search', longtitle: "Search MSSU"}
     ]) }}
     
@@ -30,32 +31,37 @@
     
     {{ standard_navlist('nav-sales white', [
         {title:"Academics", url:'/academics', dropdowns:[
-            {title: 'Schools', url: '/schools'},
+            {title: 'Schools', url: '/academics/schools.php'},
             {title: 'Undergrad', url: '/undergrad'},
-            {title: 'Graduate', url: '/graduate'},
-            {title: 'Continuing Education', url: '/continuing-education'},
-            {title: 'Academics Affairs', url: '/academic-affairs'},
-            {title: 'Library', url: '/library'}
+            {title: 'Graduate', url: '/academics/graudate.php'},
+            {title: 'Continuing Education', url: '/academics/continuing-education'},
+            {title: 'Academics Affairs', url: '/academics/academic-affairs'},
+            {title: 'Library', url: '/academics/library'}
             ]},
-        {title:"Admissions &amp; Aid", url:'/admissions',dropdowns:[
-            {title: 'Apply', url: '/apply'},
-            {title: 'Admissions', url: '/admissions'},
-            {title: 'Visit', url: '/visit'},
-            {title: 'Financial Aid', url: '/aid'},
-            {title: 'For Accepted Students', url: '/accepted-students'}
+        {title:"Admissions &amp; Aid", url:'/admissions-and-aid',dropdowns:[
+            {title: 'Apply', url: '/advancement/admissions/apply-general.php'},
+            {title: 'Admissions', url: '/advancement/admissions'},
+            {title: 'Visit', url: '/advancement/admissions/campus-tours'},
+            {title: 'Financial Aid', url: '/student-affairs/financial-aid'},
+            {title: 'For Accepted Students', url: '/advancement/admissions/for-accepted-students.php'}
             ]},
-        {title:"Life at MOSO", url:'/life',dropdowns:[
-            {title: 'Rez Life', url: '/res-life'},
-            {title: 'Get Involved', url: '/involvement'},
-            {title: 'Campus', url: '/campus'},
-            {title: 'Health &amp; Safety', url: '/health-safety'},
-            {title: 'After MOSO', url: '/alumni'}
+        {title:"Life at MOSO", url:'/life-at-moso',dropdowns:[
+            {title: 'Rez Life', url: '/student-affairs/residence-life'},
+            {title: 'Get Involved', url: '/life-at-moso/get-involved.php'},
+            {title: 'Campus', url: '/life-at-moso/campus'},
+            {title: 'Health &amp; Safety', url: '/life-at-moso/health-safety.php'},
+            {title: 'After MOSO', url: '/advancement/almuni'}
             ]},
-        {title:"Athletics", url:'/athletics',dropdowns:[
-            {title: 'MSSU Lions Home Page', url: 'http://www.mssulions.com'},
-            {title: 'Athletics Schedule', url: '/schedule'},
-            {title: 'MSSU Shop', url: '/mssushop'},
-            {title: 'Athletics Tickets', url: '/tickets'}
+        {title:"Athletics", url:'https://www.mssulions.com',dropdowns:[
+            {title: 'Athletics Schedule', url: 'https://mssulions.com/calendar.aspx'},
+            {title: 'MSSU Shop', url: 'http://mssushop.com'},
+            {title: 'Athletics Tickets', url: 'https://mssulions.universitytickets.com/w/default.aspx'}
+            ]},
+        {title:"About MOSO", url:'/about/history.php',dropdowns:[
+            {title: 'About Joplin', url: '/about-moso/about-joplin.php'},
+            {title: 'University Profile', url: '/about/history.php'},
+            {title: 'Success Stories', url: '/advancement/university-relations-marketing/find-a-lion-anywhere/index.php'},
+            {title: 'Reviews', url: '/reviews.php'}
             ]}
     ]) }} 
     

@@ -3,6 +3,7 @@
    
     <div class="tv">
 		  <div class="screen mute" id="tv"></div>
+		  <!--<iframe id="tv" class="screen mute" width="560" height="315" src="https://www.youtube.com/embed/jWxIMHbGt1o?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=jWxIMHbGt1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 	</div>
    
     <picture>
@@ -79,7 +80,7 @@
 
     function onPlayerStateChange(e) {
         if($(window).width() < 993){
-            tv.stopVideo();
+            tv.pauseVideo();
         }else{
             
             if (e.data === 1) {
@@ -119,7 +120,7 @@
         }
         
         if($(window).width() < 993){
-            tv.stopVideo();
+            tv.pauseVideo();
             console.log("smalelr");
         }else{
             tv.playVideo();

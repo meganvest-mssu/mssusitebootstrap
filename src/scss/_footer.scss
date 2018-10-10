@@ -6,6 +6,11 @@ footer {
     background: $mssu-green;
     a {
         color: white;
+        
+        &:hover{
+            color: $mssu-gold;
+            text-decoration: none;
+        }
     }
 }
 

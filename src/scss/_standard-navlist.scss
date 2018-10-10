@@ -26,7 +26,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 10;
 }
 
 .dropdown-title {
@@ -45,6 +44,7 @@
 
     i {
         padding: 1rem;
+        color: $gray-700;
     }
 
     &:hover {
@@ -77,7 +77,42 @@
 }
 
 
+
+//Optional Circular Nav Style
+.nav-circular {
+    margin-top: 2rem;
+    
+    
+    a {
+        border: 2px solid black;
+        border-radius: 2rem;
+        text-align: center;
+        padding: .5rem;
+        margin: 0 auto 1rem auto;
+        min-width: 20rem;
+        background-color: $mssu-gold;
+    }
+}
+
 @include lg {
+    
+    
+    
+    //Remove all the optional Circular Nav Style for desktop
+    .nav-circular {
+        margin-top: inherit;
+
+
+        a {
+            border: 0;
+            border-radius: inherit;
+            text-align: inherit;
+            padding: inherit;
+            margin: inherit;
+            min-width: inherit;
+            background-color: inherit;
+        }
+    }
     
     
     .standard-navlist {
@@ -136,6 +171,7 @@
     }
 
     .dropdown-content {
+        
         min-width: 20rem;
         position: absolute;
         top: 1.5rem;
@@ -147,5 +183,8 @@
 
 
     }
+    
+    
+
 
 }
