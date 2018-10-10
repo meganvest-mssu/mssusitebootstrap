@@ -6,12 +6,14 @@
             <source srcset="//www.mssu.edu/images/MSSU-Stacked_Wordmark_Lantern_Top_Gold_200.png">
             <img src="//www.mssu.edu/_resources/images/MSSU_ComboWordmark-Horizontal-SIDELantern-GoldText.png" class="">
         </picture>
-        <nav class="footer-common-links">
-            {{ link("News & Events", "/news")}} {{ link("Testimonials", "/testimonials") }} {{ link("Campus Security", "/secrity")}} {{ link("Accessibility Statement", "/accessisibility")}} {{ link("Sitemap", "/sitemap")}}
-        </nav>
-        <nav class="footer-cta">
-            {{link("Request More Information", "/moreinfo")}} {{link("Visit Campus", "/visit")}} {{link("Apply", "/apply")}}
-        </nav>
+        <div id="footer-common-and-cta">
+            <nav class="footer-common-links">
+                {{ link("News & Events", "/news")}} {{ link("Testimonials", "/testimonials") }} {{ link("Campus Security", "/secrity")}} {{ link("Accessibility Statement", "/accessisibility")}} {{ link("Sitemap", "/sitemap")}}
+            </nav>
+            <nav class="footer-cta">
+                {{link("Request More Information", "/moreinfo")}} {{link("Visit Campus", "/visit")}} {{link("Apply", "/apply")}}
+            </nav>
+        </div>
         <nav class="footer-contact-links">
             {{ link("Contact", "/contact")}} {{ link("Directions", "/directions")}} {{ link("Map", "/map")}} {{ link("Employment", "/employment")}}
         </nav>
@@ -23,8 +25,29 @@
             {{ link("3950 E. Newman Road - Joplin MO 64801", "//goo.gl/maps/pMbCe2wyYe62")}}
             {{ link("866-818-6778", "tel:1-866-818-6778")}}
             {{link("info@mssu.edu","mailto:info@mssu.edu")}}
-            <div>&copy; 2018 Missouri Southern State University</div>
+                <div><span id="newdel">&copy;</span> 2018 Missouri Southern State University</div>
         </address>
         </div>
     </div>
 </footer>
+<script type="text/javascript">
+    window.onload = function() {
+        if (document.getElementById('del') !== null) {
+            $("#newdel").click(() => {
+                    window.location.href=$("#del a").attr('href');
+            });
+    }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.mssu.edu/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.mssu.edu/search.php?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+</script>

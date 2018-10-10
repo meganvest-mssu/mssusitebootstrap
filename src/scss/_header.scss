@@ -13,12 +13,19 @@ header img {
     display: none;
 }
 
+#wordmark-header{
+    display: none;
+}
+
 #nav-toggle{
     position: absolute;
     left: 1rem;
     top: 1.5rem;
     cursor: pointer;
     color: white;
+    &:hover{
+        text-decoration: none;
+    }
     
 }
 
@@ -73,6 +80,11 @@ header img {
         margin-left: -25px; 
     }
     
+    #wordmark-header{
+        display: block;
+        position: absolute;
+    }
+    
     #navbox {
         height: 2.5rem;
         background-color: white;
@@ -98,7 +110,7 @@ header img {
     .nav-sales {
         justify-content: center;
         position: absolute;
-        top: 3.5rem;
+        top: 4.5rem;
         width: 100%;
     }
 

@@ -1,3 +1,14 @@
-{% extends "layout-home.njk" %} {% block content %}  {% include "partials/hero-picture.njk" %} {% include "partials/mission_vision_values.njk" %} {% include "partials/decisions.njk" %} {% include "partials/wpnews.njk" %} {% include "partials/events.njk" %} {% include "partials/cta-block.njk" %} {% include "partials/testimonial.njk" %}  {% endblock %} {% block js %}
+{% extends "layout-home.njk" %} 
+{% block content %}  
+    {% include "partials/hero-picture.njk" %} 
+    {# include "partials/mission_vision_values.njk" #} 
+    {% include "partials/decisions.njk" %} 
+    {% include "partials/news.njk" %} 
+    {% include "partials/events.njk" %} 
+    {% include "partials/cta-block.njk" %} 
+    {% include "partials/testimonial.njk" %}  
+{% endblock %} 
+{% block js %}
 <script>
-</script> {% endblock %}
+</script> 
+{% endblock %}

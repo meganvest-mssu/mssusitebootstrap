@@ -1,5 +1,14 @@
 /* Footer css */
 
+
+//Hide the del (link to OU CMS) and make newdel look like a link
+#del{
+    display: none;
+}
+#newdel{
+        cursor: pointer;
+}
+
 footer {
     margin-top: 4rem; //really just for testing
     padding: 1rem;
@@ -24,11 +33,14 @@ footer {
     }
 }
 
+#footer-common-and-cta{
+    display: flex;
+    justify-content: center;
+}
+
 .footer-common-links,
 .footer-cta {
-    display: inline-block;
     vertical-align: top;
-    width: 49%;
     padding: 0 1rem;
     a {
         display: block;

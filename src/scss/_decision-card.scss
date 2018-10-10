@@ -1,5 +1,7 @@
 //Decisions Section
 .section-decisions {
+    margin-top: 1rem;
+    padding-top: 5rem;
     border: 1px solid black;
     background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
     url("https://www.mssu.edu/images/About-possible-1.jpg");
@@ -11,6 +13,7 @@
     .decisions-title h1 {
         font-size: 3rem;
         font-weight: 100;
+        color: white;
     }
 }
 
@@ -26,12 +29,21 @@
     padding-top: .5rem;
     text-align: center;
     color: black;
-    transition: color .5s,
-    background .5s;
+    transition: color .5s, background .5s;
+    text-decoration: none;
+    
+    h3{
+        transition: color .5s;
+    }
+    
     &:hover {
         text-decoration: none;
         background: $mssu-green;
         color: white;
+        
+        h3{
+            color: white;
+        }
     }
 
     i {
