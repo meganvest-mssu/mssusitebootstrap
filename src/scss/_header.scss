@@ -68,7 +68,7 @@ header img {
 @include lg {
 
     header{
-        height: 6rem;
+        height: 6.5rem;
         background-color: $mssu-green;
     }
     
@@ -83,6 +83,8 @@ header img {
     #wordmark-header{
         display: block;
         position: absolute;
+        top: 2.7rem;
+        left: 3rem;
     }
     
     #navbox {
