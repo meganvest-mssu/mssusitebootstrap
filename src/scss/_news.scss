@@ -56,12 +56,8 @@
 
 .small-news-card {
     div {
-        vertical-align: middle;
-        display: inline-block;
-        width: 48%;
-        &:last-child {
-            padding-left: 1rem;
-        }
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -87,7 +83,14 @@
             }
         }
     }
-    .news-crossroads {
-        //flex: 2;
+    .small-news-card {
+    div {
+        vertical-align: middle;
+        display: inline-block;
+        width: 48%;
+        &:last-child {
+            padding-left: 1rem;
+        }
     }
+}
 }

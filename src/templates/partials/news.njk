@@ -15,7 +15,8 @@
     </div>
 </section>
 <script>
-    <!-- When document is ready dynmically load news content -->
+    //When document is ready dynmically load news content.  Eventaully shoud do this with promises so screen doesn't pop so much but to get it working for now....
+    
     $(function() {
         getCrossroadsContent();
         getMosoMinuteContent();
@@ -31,12 +32,26 @@
     }
 
     function getMosoMinuteContent() {
-        $.get('//moso-minute.mssu.edu/wp-json/wp/v2/posts?_embed', function(data) {
-            for (var i = 1; i <= 3; i++) {
-                var currentStory = data[i];
-                $(".news-moso_minute-stories").append(buildSmallNewsCard(currentStory));
-            }
+        $.get('//moso-minute.mssu.edu/wp-json/wp/v2/posts?_embed&categories=20&per_page=1', function(data) {
+            var smallCards = [];
+            
+            smallCards.push(buildSmallNewsCard(data[0]));
+            
+            
+             $.get('//moso-minute.mssu.edu/wp-json/wp/v2/posts?_embed&categories=14&per_page=2', function(data) {
+                for (var i = 0; i < 2; i++) {
+                    smallCards.push(buildSmallNewsCard(data[i]));
+                }
+                 
+                smallCards.forEach( (card) =>{
+                    $(".news-moso_minute-stories").append(card);
+                });
+            });
+
         });
+        
+        
+       
     }
 
     function buildNewsCard(data) {

@@ -3,6 +3,8 @@
     img {
         width: 100%;
     }
+    border-bottom: 1rem solid $mssu-green;    
+    
 }
 
 .hero-cta {
@@ -40,6 +42,14 @@
 
 @include lg {
 
+    #hero-picture-section {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+
+    
     .tv {
         display: block;
         position: absolute;

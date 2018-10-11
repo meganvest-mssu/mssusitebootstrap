@@ -1,9 +1,38 @@
 <div class="section-testimonial">
     <div class="section-header">
         <h2>What <span>MOSO</span> graduates are saying.</h2> <a href="/reviews.php" aria-label="Missouri Southern Calendar" title="View the MSSU Calendar"> See more...</a> </div>
-    <div class="testimonial-card"> <img class="testimonial-image" src="https://farm2.staticflickr.com/1830/43465677882_1d066e1892_q_d.jpg">
+    <div class="testimonial-card"> 
+       <!--<img class="testimonial-image" src="https://farm2.staticflickr.com/1830/43465677882_1d066e1892_q_d.jpg">-->
         <div class="testimonial-card-info">
-            <h3 class="testimonial-card-name">Chelsie Watson</h3> <span class="testimonial-card-title">Director of Watson Enterprises</span> </div>
-        <p class="testimonial-card-copy">MSSU is great. I learned so much and can't thank you enough. The career I have now is a dreas and I could not have gotten here without Missouri Southern.</p>
+            <h3 id="testimonial-card-name" class="testimonial-card-name"></h3>
+            <!--<span id="testimonial-card-title" class="testimonial-card-title">Director of Watson Enterprises</span>-->
+        </div>
+        <p id="testimonial-card-copy" class="testimonial-card-copy"></p>
     </div>
 </div>
+
+<div style="display: none" class="cl_reviews"> </div>
+<script>
+
+    //This may not be the mest method as this loads all reviews into the header and probably messes with SEO for the home page which might overtake our Radtings page.  So be conscious of this.
+    $(function() {
+        var done = false;
+        $('.cl_reviews').bind("DOMSubtreeModified",function(){
+            if(!done){
+                done=true;
+                var randomReview = Math.floor(Math.random() * seoData.department.review.length - 1);    
+                $("#testimonial-card-name").html(seoData.department.review[randomReview].author);
+                $("#testimonial-card-copy").html(seoData.department.review[randomReview].reviewBody);
+                console.log(seoData.department.review[randomReview]);
+            }
+        });
+      });
+
+    
+</script>
+
+<script type="text/javascript">
+    var expiricallyCustomerId = 'j53p63zPNEKlkFUUrjBfzw';
+    var expiricallyGroupId = '0KDdf683c0KzSCSCAoefkA';
+</script>
+<script src="https://claritycdn.azureedge.net/plugin/v1/expirically.js" type="text/javascript">

@@ -1,19 +1,10 @@
 //Decisions Section
 .section-decisions {
-    margin-top: 1rem;
-    padding-top: 5rem;
-    border: 1px solid black;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
-    url("https://www.mssu.edu/images/About-possible-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     text-align: center;
-    color: #fff; //min-height: 450px;
+    color: #fff;
     .decisions-title h1 {
         font-size: 3rem;
         font-weight: 100;
-        color: white;
     }
 }
 
@@ -52,7 +43,17 @@
 }
 
 @include lg {
-    .section-decisions {}
+    .section-decisions {
+        padding: 8rem 0 4rem 0;
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+        url("https://www.mssu.edu/_resources/images/decisionsphoto.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        .decisions-title h1 {
+            color: white;
+        }
+    }
 
     .decision-cards {
         display: flex;
