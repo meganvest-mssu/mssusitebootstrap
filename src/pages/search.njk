@@ -1,6 +1,6 @@
 {% extends "layout-interior.njk" %} {% block content %}
-<div class="container">
-    <!-- TODO get google search results to display in page. this should be on our custom google search page settings -->
+<!-- <div class="container">
+     //TODO get google search results to display in page. this should be on our custom google search page settings 
     <gcse:searchresults-only></gcse:searchresults-only>
     <script>
         (function() {
@@ -16,5 +16,29 @@
         })();
 
     </script>
-</div>
+</div>-->
+
+
+
+
+<form>
+    <input name="q">
+    <button type="submit">Search</button>
+</form>
+<script type="text/javascript">// <![CDATA[
+(function() {
+                        var cx = '014032116808286694933:ykszde6dmh0';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                            '//www.google.com/cse/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+// ]]></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+
+
 {% endblock %}
