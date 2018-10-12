@@ -15,7 +15,7 @@
 
 @import "global";
 @import "variables";
-//@import "navbar"; 
+@import "search"; 
 @import "header";
 @import "standard-navlist";
 @import "footer";
@@ -28,7 +28,7 @@
 @import "testimonial";
 @import "news";
 @import "mvv-card";
-@import "responsive_dropdown";
+//@import "responsive_dropdown";
 @import "styles-extra";
 
 
@@ -40,5 +40,9 @@
     }
     .flex-justify {
         justify-content: space-around;
+    }
+    
+    .shadow{
+        box-shadow: 7px 3px 25px rgba(0, 0, 0, .4);
     }
 }

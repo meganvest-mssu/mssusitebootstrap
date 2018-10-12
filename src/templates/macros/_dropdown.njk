@@ -4,7 +4,7 @@
         <a class="dropdown-title-text" href="{{ url }}">{{ title | safe }}</a>
         <a class="dropdown-button"><i class="fa fa-angle-down nav-arrow"></i></a>
     </div>
-    <div class="dropdown-content">
+    <div class="dropdown-content shadow">
         {% for dropdown in dropdowns %}
         <a href="{{ dropdown.url}}">{{ dropdown.title | safe }}</a>
         {% endfor %}

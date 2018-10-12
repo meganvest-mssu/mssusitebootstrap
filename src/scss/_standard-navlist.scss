@@ -150,12 +150,18 @@
     .dropdown {
 
         margin-right: 3rem;
+        padding: 0 0 .5rem 0;
+        
 
         &:hover {
             .dropdown-content {
                 display: flex;
             }
         }
+    }
+    
+    .dropdown-title-text{
+            content: 'adf';
     }
     
     .dropdown-title a + .dropdown-content{

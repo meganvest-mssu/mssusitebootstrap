@@ -20,10 +20,15 @@
         $('.cl_reviews').bind("DOMSubtreeModified",function(){
             if(!done){
                 done=true;
-                var randomReview = Math.floor(Math.random() * seoData.department.review.length - 1);    
-                $("#testimonial-card-name").html(seoData.department.review[randomReview].author);
-                $("#testimonial-card-copy").html(seoData.department.review[randomReview].reviewBody);
-                console.log(seoData.department.review[randomReview]);
+                
+                //Remove anyone who graduated before 2000
+                var ordered = seoData.department.review.map((e)=> {e.gradDate = new Date(e.author.split(" ")[0]); return e}).filter( (e) => e.gradDate > new Date("1/1/2000")).sort((a,b) => { return a.gradDate > b.gradDate ? -1 : a.gradDate < b.gradDate ? 1 : 0});
+                
+                
+                var randomReview = ordered[Math.floor(Math.random() * ordered.length - 1)];    
+                
+                $("#testimonial-card-name").html(randomReview.author);
+                $("#testimonial-card-copy").html(randomReview.reviewBody);
             }
         });
       });
