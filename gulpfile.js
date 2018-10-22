@@ -9,6 +9,9 @@ var newer = require('gulp-newer');
 var reload = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
 var WP = require( 'wordpress-rest-api' );
+const gulpDeployFtp = require('gulp-deploy-ftp');
+var ftp = require( 'vinyl-ftp' );
+var gutil = require( 'gulp-util' );
 
 var src = {
     scss: 'src/scss/**/*.scss',
@@ -50,7 +53,7 @@ gulp.task('scss', function () {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest("dist/_resources/css"))
         .pipe(reload({
             stream: true
         }));
@@ -70,6 +73,28 @@ gulp.task('wp', function () {
 	getCrossroadsData();   
     
 });
+
+gulp.task('ftp', function(){
+       var conn = ftp.create( {
+        host:     '204.185.19.32',
+        user:     'webuser',
+        password: 'webis4mssu',
+        parallel: 10,
+        log:      gutil.log
+    } );
+ 
+    var globs = [
+        'dist/search/index.html'
+    ];
+ 
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+ 
+    return gulp.src( globs, { base: './dist', buffer: false } )
+        .pipe( conn.newer( '/var/www/html' ) ) // only upload newer files
+        .pipe( conn.dest( '/var/www/html' ) );
+});
+       
 
 var crData = null;
 var mmData = null;
