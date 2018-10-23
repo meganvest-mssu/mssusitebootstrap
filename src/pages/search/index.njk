@@ -20,12 +20,29 @@
 
 
 
-
 <form id="searchbox">
-    <input type="text" name="q">
-    <button type="submit">Search MSSU</button>
+    <input type="search" name="q" placeholder="Search MSSU...">
+    <button id="reset" type="reset">X</button>
+    <!--<button type="submit">Search MSSU</button>-->
 </form>
 <script type="text/javascript">
+    
+ (function() { 
+     //Manage the search form 
+     $("input[type='search']").keyup((e)=> {
+         console.log(e.target.value.length);
+         if(e.target.value.length > 0){
+             $("#reset").show();
+         }else{
+             $("#reset").hide();
+         }
+                                               
+    });
+ 
+    
+ })();
+    
+    
 (function() {
                         var cx = '014032116808286694933:ykszde6dmh0';
                         var gcse = document.createElement('script');
@@ -37,7 +54,7 @@
                         s.parentNode.insertBefore(gcse, s);
                     })();
 </script>
-<gcse:searchresults-only></gcse:searchresults-only>
+<!--<gcse:searchresults-only></gcse:searchresults-only>-->
 
 
 
