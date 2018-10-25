@@ -1,4 +1,4 @@
-<! -- Header -->
+<!-- Header -->
 {% from "macros/_standard_navlist.njk" import standard_navlist %}
 
 <header>
@@ -74,10 +74,12 @@
 </header>
 
 <script>
-    $('.dropdown-button').click((el)=> { $(el.currentTarget).parent().parent().toggleClass('expanded') });
-    $('#nav-toggle').click(()=> { $('#navbox').toggleClass('open') });
+    $('.dropdown-button').click(
+        function(el){ $(el.currentTarget).parent().parent().toggleClass('expanded') }
+    );
+    $('#nav-toggle').click(function(){ $('#navbox').toggleClass('open') });
     
     
 </script>
 
-<! -- Header END -->
+<!-- Header END -->

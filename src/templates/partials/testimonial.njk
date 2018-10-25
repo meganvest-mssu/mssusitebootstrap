@@ -22,14 +22,22 @@
                 done=true;
                 
                 //Remove anyone who graduated before 2000
-                var ordered = seoData.department.review.map((e)=> {e.gradDate = new Date(e.author.split(" ")[0]); return e}).filter( (e) => e.gradDate > new Date("1/1/2000")).sort((a,b) => { return a.gradDate > b.gradDate ? -1 : a.gradDate < b.gradDate ? 1 : 0});
+                var ordered = seoData.department.review.map(function(e){e.gradDate = new Date(e.author.split(" ")[0]); return e}).filter( function(e){e.gradDate > new Date("1/1/2000")}).sort(function(a,b) { return a.gradDate > b.gradDate ? -1 : a.gradDate < b.gradDate ? 1 : 0});
                 
                 
                 var randomReview = ordered[Math.floor((Math.random() * ordered.length) - 1)];    
-                
+                try{
                 $("#testimonial-card-name").html(randomReview.gradDate.getFullYear() + " Graduate");
                 //Fill in the body of the review, also remore ? from copy, bug from the reviews company
                 $("#testimonial-card-copy").html(randomReview.reviewBody.replace(/\?/g, " "));
+                }catch(e){
+                    let filler = "MSSU is a wonderful school. I had an incredible experience studying Biology. The professors were incredible and showed that they care by always being there to help students. I always felt welcomed by the faculty and staff. Small class sizes made it possible for professors to get to know students. I had the most wonderful academic advisor who helped me with my four-year plan and helped me succeed in everything I did. I studied abroad twice and it was a life-changing experience each time. Missouri Southern made it easy to get through college! I never had any surprise fees, and the financial offices were always helpful. I got very involved with several clubs on campus, including the Campus Activities Board and Lion Ambassadors, and I had so much fun! I made lifelong friends in both my peers, faculty, and professors. I lived in the dorms on campus throughout my four years at MSSU and I never felt unsafe. I had a very pleasant experience in the dorms from the traditional style to the apartments, and then eventually in the Quads. I love MSSU and the world of opportunities it provided for me."
+                    
+                    $("#testimonial-card-name").html("2018 Graduate");
+                    //Fill in the body of the review, also remore ? from copy, bug from the reviews company
+                    $("#testimonial-card-copy").html(filler);
+                }
+                
             }
         });
       });

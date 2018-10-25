@@ -43,7 +43,7 @@
                     smallCards.push(buildSmallNewsCard(data[i]));
                 }
                  
-                smallCards.forEach( (card) =>{
+                smallCards.forEach( function(card){
                     $(".news-moso_minute-stories").append(card);
                 });
             });
@@ -55,25 +55,12 @@
     }
 
     function buildNewsCard(data) {
-        var template = `<li>
-                    <h4><a href="${data.link}">${data.title.rendered}</a></h4> 
-                    <a href="${data.link}"><img src="${data._embedded['wp:featuredmedia'][0].source_url}"></a>
-                    <p>${data.excerpt.rendered}</p>
-                </li>`;
+        var template = '<li><h4><a href="${data.link}">' + data.title.rendered + '</a></h4><a href="' + data.link + '"><img src="' + data._embedded['wp:featuredmedia'][0].source_url + '"></a><p>' + data.excerpt.rendered + '</p></li>';
         return template;
     }
 
     function buildSmallNewsCard(data) {
-        var template = `<li class="small-news-card">
-
-                    <div>
-                        <a href="${data.link}"><img src="${data._embedded['wp:featuredmedia'][0].source_url}"></a>
-                    </div>
-                    <div>
-                        <h4><a href="${data.link}">${data.title.rendered}</a></h4> 
-                        <p>${data.excerpt.rendered}</p>
-                    </div>
-                </li>`;
+        var template = '<li class="small-news-card"><div><a href="' + data.link + '"><img src="' + data._embedded['wp:featuredmedia'][0].source_url + '"></a></div><div><h4><a href="' + data.link + '">' + data.title.rendered + '</a></h4><p>' + data.excerpt.rendered + '</p></div></li>';
         return template;
     }
 
