@@ -9,19 +9,18 @@
     
     
     input[type='search']{
-        font-size: 4rem;
+        font-size: 2rem;
+        height: 3rem;
         text-align: center;
-        width: 90%;
-        //padding-left: 2rem;
-        //border-radius: 1.5rem 0 0 1.5rem;
-        border: 0px solid $gray-500;
+        width: 50%;
+        border: 0;
         outline: none;
     }
     
     button[type='reset']{
         display: none;
         border: 0;
-        font-size: 5rem;
+        font-size: 2rem;
         border-left: 0;
         background-color: white;
         color: $gray-300;
@@ -37,4 +36,18 @@
         padding: 0 2rem;
     }
 
+}
+
+
+@include lg {
+    #searchbox {
+        input[type='search'] {
+            font-size: 4rem;
+            height: 5rem;
+        }
+
+        button[type='reset'] {
+            font-size: 4rem;
+        }
+    }
 }

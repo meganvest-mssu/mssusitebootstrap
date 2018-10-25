@@ -23,8 +23,8 @@
     })
 
     function getCrossroadsContent() {
-        $.get('//crossroads.mssu.edu/wp-json/wp/v2/posts?_embed', function(data) {
-            for (var i = 1; i <= 2; i++) {
+        $.get('//crossroads.mssu.edu/wp-json/wp/v2/posts?_embed&per_page=2', function(data) {
+            for (var i = 0; i < data.length; i++) {
                 var currentStory = data[i];
                 $(".news-crossroads-stories").append(buildNewsCard(currentStory));
             }
@@ -39,7 +39,7 @@
             
             
              $.get('//moso-minute.mssu.edu/wp-json/wp/v2/posts?_embed&categories=14&per_page=2', function(data) {
-                for (var i = 0; i < 2; i++) {
+                for (var i = 0; i < data.length; i++) {
                     smallCards.push(buildSmallNewsCard(data[i]));
                 }
                  

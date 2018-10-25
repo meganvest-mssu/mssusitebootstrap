@@ -1,6 +1,6 @@
 <div class="section-testimonial">
     <div class="section-header">
-        <h2>What <span>MOSO</span> graduates are saying.</h2> <a href="/reviews.php" aria-label="Missouri Southern Calendar" title="View the MSSU Calendar"> See more...</a> </div>
+        <h2>What <span>MOSO</span> graduates are saying</h2> <a href="/reviews.php" aria-label="Missouri Southern Calendar" title="View the MSSU Calendar"> See more...</a> </div>
     <div class="testimonial-card"> 
        <!--<img class="testimonial-image" src="https://farm2.staticflickr.com/1830/43465677882_1d066e1892_q_d.jpg">-->
         <div class="testimonial-card-info">
@@ -14,7 +14,7 @@
 <div style="display: none" class="cl_reviews"> </div>
 <script>
 
-    //This may not be the mest method as this loads all reviews into the header and probably messes with SEO for the home page which might overtake our Radtings page.  So be conscious of this.
+    //This may not be the best method as this loads all reviews into the header and probably messes with SEO for the home page which might overtake our Radtings page.  So be conscious of this.
     $(function() {
         var done = false;
         $('.cl_reviews').bind("DOMSubtreeModified",function(){
@@ -25,14 +25,15 @@
                 var ordered = seoData.department.review.map((e)=> {e.gradDate = new Date(e.author.split(" ")[0]); return e}).filter( (e) => e.gradDate > new Date("1/1/2000")).sort((a,b) => { return a.gradDate > b.gradDate ? -1 : a.gradDate < b.gradDate ? 1 : 0});
                 
                 
-                var randomReview = ordered[Math.floor(Math.random() * ordered.length - 1)];    
+                var randomReview = ordered[Math.floor((Math.random() * ordered.length) - 1)];    
                 
-                $("#testimonial-card-name").html(randomReview.author);
-                $("#testimonial-card-copy").html(randomReview.reviewBody);
+                $("#testimonial-card-name").html(randomReview.gradDate.getFullYear() + " Graduate");
+                //Fill in the body of the review, also remore ? from copy, bug from the reviews company
+                $("#testimonial-card-copy").html(randomReview.reviewBody.replace(/\?/g, " "));
             }
         });
       });
-
+    
     
 </script>
 

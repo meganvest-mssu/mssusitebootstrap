@@ -1,4 +1,6 @@
-<!-- Footer -->{% from "macros/_link.njk" import link %} {% from "macros/_social_icon.njk" import social_icon %}
+<!-- Footer -->
+{% from "macros/_link.njk" import link %} 
+{% from "macros/_social_icon.njk" import social_icon %}
 <footer>
     <div>
         <picture class="footer-logo">
@@ -8,18 +10,22 @@
         </picture>
         <div id="footer-common-and-cta">
             <nav class="footer-common-links">
-                {{ link("News & Events", "/news")}} {{ link("Testimonials", "/testimonials") }} {{ link("Campus Security", "/secrity")}} {{ link("Accessibility Statement", "/accessisibility")}} {{ link("Sitemap", "/sitemap")}}
+                {{ link("News & Events", "/advancement/university-relations-marketing/press-and-media.php")}} 
+                {{ link("Testimonials", "/reviews.php") }} 
+                {{ link("Campus Security", "/student-affairs/university-police/")}} 
+                {{ link("Accessibility Statement", "/student-affairs/disability-services/accessibility-statement.php")}} 
+                {# {{ link("Sitemap", "/sitemap")}} #}
             </nav>
             <nav class="footer-cta">
-                {{link("Request More Information", "/moreinfo")}} {{link("Visit Campus", "/visit")}} {{link("Apply", "/apply")}}
+                {{link("Request More Information", "/advancement/admissions/information-request.php")}} {{link("Visit Campus", "/admissions/campus-tours/")}} {{link("Apply", "/apply")}}
             </nav>
         </div>
         <nav class="footer-contact-links">
-            {{ link("Contact", "/contact")}} {{ link("Directions", "/directions")}} {{ link("Map", "/map")}} {{ link("Employment", "/employment")}}
+            {{ link("Contact", "/directory.php")}} {{ link("Directions", "/map.php")}} {{ link("Map", "/map.php")}} {{ link("Employment", "/business-affairs/human-resources/applicant-portal.php")}}
         </nav>
         <div>
             <nav class="footer-social">
-                {{social_icon("twitter")}} {{social_icon("facebook")}} {{social_icon("youtube")}} {{social_icon("instagram")}}
+                {{social_icon("twitter", "https://twitter.com/mosolions")}} {{social_icon("facebook", "https://www.facebook.com/mssulions/")}} {{social_icon("youtube", "https://www.youtube.com/channel/UCHu5ezK20z_4iJZBvN7KEbw")}} {{social_icon("instagram", "https://www.instagram.com/mosolions/")}}
             </nav>
             <address class="footer-contact">
             {{ link("3950 E. Newman Road - Joplin MO 64801", "//goo.gl/maps/pMbCe2wyYe62")}}
