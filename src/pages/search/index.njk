@@ -1,65 +1,25 @@
 {% extends "layout-interior.njk" %} {% block content %}
-<!-- <div class="container">
-     //TODO get google search results to display in page. this should be on our custom google search page settings 
-    <gcse:searchresults-only></gcse:searchresults-only>
-    <script>
-        (function() {
-            var cx = '014032116808286694933:ykszde6dmh0';
-            var gcse = document.createElement('script');
-
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-        })();
-
-    </script>
-</div>-->
 
 
 
-<form id="searchbox">
-    <input type="search" name="q" placeholder="Search MSSU...">
-    <button id="reset" type="reset">X</button>
-    <!--<button type="submit">Search MSSU</button>-->
-</form>
-<script type="text/javascript">
-    
- (function() { 
-     //Manage the search form 
-     $("input[type='search']").keyup((e)=> {
-         console.log(e.target.value.length);
-         if(e.target.value.length > 0){
-             $("#reset").show();
-         }else{
-             $("#reset").hide();
-         }
-                                               
-    });
-     
-      $("#reset").click((e)=>{
-          $("#reset").hide();
-      });
 
- 
-    
- })();
+<div style="max-width: 960px; margin: auto">
     
     
-(function() {
-                        var cx = '014032116808286694933:ykszde6dmh0';
-                        var gcse = document.createElement('script');
-                        gcse.type = 'text/javascript';
-                        gcse.async = true;
-                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                            '//www.google.com/cse/cse.js?cx=' + cx;
-                        var s = document.getElementsByTagName('script')[0];
-                        s.parentNode.insertBefore(gcse, s);
-                    })();
+
+<script>
+  (function() {
+    var cx = '014032116808286694933:ykszde6dmh0';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
 </script>
-<gcse:searchresults-only></gcse:searchresults-only>
+<gcse:search></gcse:search>   
+</div>
 
 
 
