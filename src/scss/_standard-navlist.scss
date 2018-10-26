@@ -161,7 +161,7 @@
     }
     
     .dropdown-title-text{
-            content: 'adf';
+            content: '';
     }
     
     .dropdown-title a + .dropdown-content{
@@ -177,11 +177,14 @@
     }
 
     .dropdown-content {
-        
         min-width: 20rem;
         position: absolute;
-        top: 1.5rem;
-        background-color: white;
+        padding-top: 1rem;
+        background-color: transparent;
+        
+        >a{
+            background-color: white;
+        }
 
         h1 {
             display: inherit;
