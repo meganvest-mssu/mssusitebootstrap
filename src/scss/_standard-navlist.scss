@@ -148,9 +148,10 @@
     }
 
     .dropdown {
+        position: relative;
 
-        margin-right: 3rem;
-        padding: 0 0 .5rem 0;
+        //margin-right: 3rem;
+        //padding: 0 0 .5rem 0;
         
 
         &:hover {
@@ -160,8 +161,13 @@
         }
     }
     
+    .dropdown-title{
+        height: 100%;
+    }
+    
     .dropdown-title-text{
-            content: '';
+            //content: '';
+        line-height: 2rem;
     }
     
     .dropdown-title a + .dropdown-content{
@@ -179,7 +185,7 @@
     .dropdown-content {
         min-width: 20rem;
         position: absolute;
-        padding-top: 1rem;
+        top: 2rem;
         background-color: transparent;
         
         >a{

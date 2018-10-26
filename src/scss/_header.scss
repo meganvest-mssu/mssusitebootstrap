@@ -106,13 +106,14 @@ header img {
     }
 
     .nav-common {
-        order: 1;
+        //order: 1;
     }
 
     .nav-sales {
-        padding-top: 5rem;
-        position: relative;
-        padding-bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        position: absolute;
+        top: 4.5rem;
     }
     
     
